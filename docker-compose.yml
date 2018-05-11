@@ -15,8 +15,8 @@ services:
       - net-php
 
   php:
-    build: ./php/php72/
-    container_name: dnmp-php
+    build: "./php/${PHP_VERSION}/"
+    container_name: php
     expose:
       - "9000"
     volumes:
@@ -31,7 +31,8 @@ services:
 
   mysql:
     image: mysql:latest
-    container_name: dnmp-mysql
+    container_name: mysql
+    hostname: mysql
     ports:
       - "3306:3306"
     volumes:
@@ -45,13 +46,68 @@ services:
 
   redis:
     image: redis:latest
-    container_name: dnmp-redis
+    container_name: redis
+    hostname: redis
     networks:
       - net-redis
     ports:
       - "6379:6379"
 
+  elasticsearch:
+    image: elasticsearch
+    container_name: elasticsearch
+    hostname: elasticsearch
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+    volumes:
+      - ./elasticsearch/data/:/usr/share/elasticsearch/data/:rw
+      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+    networks:
+      - net-elk
+
+  kibana:
+    image: kibana
+    container_name: kibana
+    hostname: kibana
+    ports:
+      - "5601:5601"
+    volumes:
+      - ./kibana/config/:/usr/share/kibana/config:ro
+    depends_on:
+      - elasticsearch
+    external_links:
+      - elasticsearch:elasticsearch
+    networks:
+      - net-elk
+
+  logstash:
+    image: logstash
+    container_name: logstash
+    hostname: logstash
+    ports:
+      - "5000:5000"
+      - "12201:12201/udp"
+      - "9600:9600"
+    volumes:
+      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+      - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
+      - ./log/:/var/log/dnmp/:ro
+    command: logstash -f /usr/share/logstash/pipeline/
+    external_links:
+      - elasticsearch:elasticsearch
+    depends_on:
+      - elasticsearch
+    environment:
+      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+    networks:
+      - net-elk
+
 networks:
   net-php:
   net-mysql:
   net-redis:
+  net-elk:
+    driver: bridge

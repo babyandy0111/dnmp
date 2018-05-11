@@ -1,3 +1,3 @@
 <?php
-echo 'Site 1<br />';
-phpinfo();
+echo 'Site 1 eeeee<br />';
+
