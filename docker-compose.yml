@@ -2,7 +2,7 @@ version: "3"
 services:
   nginx:
     image: nginx:alpine
-    container_name: dnmp-nginx
+    container_name: nginx
     ports:
       - "80:80"
       - "443:443"
@@ -42,7 +42,22 @@ services:
     networks:
       - net-mysql
     environment:
-      MYSQL_ROOT_PASSWORD: "123456"
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    links: 
+        - mysql:mysql
+    ports:
+        - 8080:80
+    environment:
+        PMA_HOST: mysql
+    networks:
+      - net-myadmin
+      - net-mysql
 
   redis:
     image: redis:latest
@@ -54,7 +69,7 @@ services:
       - "6379:6379"
 
   elasticsearch:
-    image: elasticsearch
+    image: elasticsearch:latest
     container_name: elasticsearch
     hostname: elasticsearch
     ports:
@@ -105,9 +120,39 @@ services:
     networks:
       - net-elk
 
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    hostname: rabbitmq
+    environment:
+      - RABBITMQ_ERLANG_COOKIE=${RABBITMQ_ERLANG_COOKIE}
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+      - RABBITMQ_DEFAULT_VHOST=${RABBITMQ_DEFAULT_VHOST}
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    networks:
+      - net-rabbitmq
+
+  php-redis-admin:
+    image: faktiva/php-redis-admin
+    container_name: redis-admin
+    environment:
+        - PHPREDMIN_DATABASE_REDIS_0_HOST=redis
+        #admin/admin
+    ports:
+        - "63791:80"
+    networks:
+        - net-redis
+    depends_on:
+        - redis
+
 networks:
   net-php:
   net-mysql:
   net-redis:
+  net-myadmin:
+  net-rabbitmq:
   net-elk:
     driver: bridge
