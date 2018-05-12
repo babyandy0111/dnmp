@@ -30,7 +30,7 @@ services:
       - net-redis
 
   mysql:
-    image: mysql:latest
+    image: mysql:5.6
     container_name: mysql
     hostname: mysql
     ports:
@@ -45,6 +45,7 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_HOST: localhost
 
   phpmyadmin:
     container_name: phpmyadmin
@@ -109,7 +110,7 @@ services:
     volumes:
       - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
       - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
-      - ./log/:/var/log/dnmp/:ro
+      - ./log/:/var/log/dnmp/:rw
     command: logstash -f /usr/share/logstash/pipeline/
     external_links:
       - elasticsearch:elasticsearch
