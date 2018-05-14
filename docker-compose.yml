@@ -1,7 +1,7 @@
 version: "3"
 services:
   nginx:
-    image: nginx:alpine
+    image: nginx:${NGINX_VERSION}
     container_name: nginx
     ports:
       - "80:80"
@@ -30,7 +30,7 @@ services:
       - net-redis
 
   mysql:
-    image: mysql:5.7
+    image: mysql:${MYSQL_VERSION}
     container_name: mysql
     hostname: mysql
     ports:
@@ -45,7 +45,7 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      MYSQL_HOST: localhost
+      MYSQL_HOST: ${MYSQL_HOST}
 
   phpmyadmin:
     container_name: phpmyadmin
@@ -61,7 +61,7 @@ services:
       - net-mysql
 
   redis:
-    image: redis:latest
+    image: redis:${REDIS_VERION}
     container_name: redis
     hostname: redis
     networks:
@@ -70,7 +70,7 @@ services:
       - "6379:6379"
 
   elasticsearch:
-    image: elasticsearch:latest
+    image: elasticsearch:${ELK_VERSION}
     container_name: elasticsearch
     hostname: elasticsearch
     ports:
@@ -85,7 +85,7 @@ services:
       - net-elk
 
   kibana:
-    image: kibana
+    image: kibana:${ELK_VERSION}
     container_name: kibana
     hostname: kibana
     ports:
@@ -100,7 +100,7 @@ services:
       - net-elk
 
   logstash:
-    image: logstash
+    image: logstash:${ELK_VERSION}
     container_name: logstash
     hostname: logstash
     ports:
