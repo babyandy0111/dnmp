@@ -3,6 +3,8 @@ services:
   nginx:
     image: nginx:${NGINX_VERSION}
     container_name: nginx
+    depends_on:
+      - php
     ports:
       - "80:80"
       - "443:443"
@@ -28,6 +30,16 @@ services:
       - net-php
       - net-mysql
       - net-redis
+
+  #composer:
+  #  container_name: composer
+  #  image: composer/composer:php7
+  #  working_dir: /var/www/html
+  #  command: global require 'laravel/installer'
+  #  volumes:
+  #    - ./www/:/var/www/html/:rw
+  #  networks:
+  #    - net-composer
 
   mysql:
     image: mysql:${MYSQL_VERSION}
@@ -155,5 +167,6 @@ networks:
   net-redis:
   net-myadmin:
   net-rabbitmq:
+  #net-composer:
   net-elk:
     driver: bridge
