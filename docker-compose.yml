@@ -30,9 +30,6 @@ services:
       - net-php
       - net-mysql
       - net-redis
-      - net-mongo
-      - net-rabbitmq
-      - net-elk
 
   #composer:
   #  container_name: composer
@@ -172,24 +169,21 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=example
     volumes:
       - ./mango/data/db:/data/db
-    networks:
-        - net-mongo
     ports:
-        - 27017:27017
+        - "27017:27017"
     command: mongod --smallfiles --logpath=/dev/null # --quiet
 
   mongo-express:
     image: mongo-express
     container_name: mongo-express
     ports:
-      - 8081:8081
+      - "8081:8081"
     links:
       - mongo:mongo
+    mem_limit: 128m
     environment:
       - ME_CONFIG_MONGODB_ADMINUSERNAME=root
       - ME_CONFIG_MONGODB_ADMINPASSWORD=example
-    networks:
-      - net-mongo-express
     depends_on:
       - mongo
 
@@ -199,8 +193,8 @@ networks:
   net-redis:
   net-myadmin:
   net-rabbitmq:
-  net-mongo-express:
-  net-mongo:
+  #net-mongo-express:
+  #net-mongo:
   #net-composer:
   net-elk:
     driver: bridge
