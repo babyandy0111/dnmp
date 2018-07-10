@@ -12,6 +12,13 @@ if (!$link) {
 echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
 echo "Host information: " . mysqli_get_host_info($link) . PHP_EOL;
 
-mysqli_close($link);
-echo 'Site 1 eeeee<br />';
 
+//$conn = new Mongo('mongo');
+$conn = new MongoClient();
+if (!$conn) {
+    echo "Error: Unable to connect to mongo." . PHP_EOL;
+    exit;
+}
+
+mysqli_close($link);
+phpinfo();
