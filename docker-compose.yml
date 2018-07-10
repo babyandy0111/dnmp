@@ -180,7 +180,6 @@ services:
       - "8081:8081"
     links:
       - mongo:mongo
-    mem_limit: 128m
     environment:
       - ME_CONFIG_MONGODB_ADMINUSERNAME=root
       - ME_CONFIG_MONGODB_ADMINPASSWORD=example
