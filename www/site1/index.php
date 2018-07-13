@@ -1,4 +1,6 @@
 <?php
+$iipp = $_SERVER["REMOTE_ADDR"];
+echo $iipp ;
 
 $link = mysqli_connect("mysql", "root", "123456");
 

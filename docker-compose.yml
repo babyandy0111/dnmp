@@ -186,6 +186,17 @@ services:
     depends_on:
       - mongo
 
+  node:
+    build: "./nodejs"
+    container_name: node
+    ports:
+      - "3000:300"
+    environment:
+      - PORT=3000
+    volumes:
+      - ./www/:/var/www/html/:rw
+    command: npm start
+
 networks:
   net-php:
   net-mysql:
