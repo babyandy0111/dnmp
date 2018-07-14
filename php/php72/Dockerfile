@@ -101,4 +101,14 @@ RUN apt-get update \
 # Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer
 RUN pecl install mongodb
-RUN echo "extension=mongodb.so" >> /usr/local/etc/php/php.ini
+#RUN echo "extension=mongodb.so" >> /usr/local/etc/php/php.ini
+
+# xdebug
+RUN apt install wget
+RUN wget http://xdebug.org/files/xdebug-2.6.0.tgz \
+    && tar -xvzf xdebug-2.6.0.tgz \
+    && cd xdebug-2.6.0 \
+    && phpize \
+    && ./configure \
+    && make \
+    && cp modules/xdebug.so /usr/local/lib/php/extensions/no-debug-non-zts-20170718

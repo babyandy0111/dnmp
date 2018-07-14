@@ -102,5 +102,20 @@ $ touch log/mysql.slow.log
 $ chmod a+w log/mysql.slow.log
 ```
 
-## 6. License
+## 6. Debug
+Xdebug
+```
+https://medium.com/@dadakao/%E4%BD%BF%E7%94%A8phpstorm-debugger%E9%99%A4%E9%8C%AFdocker-container%E5%85%A7%E7%9A%84php%E7%A8%8B%E5%BC%8F-1ebd16017464
+```
+
+laravel ide helper
+```
+$ composer require "doctrine/dbal: ~2.3"
+
+$ php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider" --tag=config
+
+
+```
+
+## 7. License
 MIT

@@ -1,7 +1,7 @@
 <?php
 $iipp = $_SERVER["REMOTE_ADDR"];
-echo $iipp ;
-
+echo $iipp ."<br>";
+phpinfo();
 $link = mysqli_connect("mysql", "root", "123456");
 
 if (!$link) {
@@ -24,4 +24,4 @@ if (!$conn) {
    echo "Success: A proper connection to MongoDB was made!" . PHP_EOL;
 }
 
-phpinfo();
+
