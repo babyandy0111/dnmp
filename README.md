@@ -1,40 +1,59 @@
-# dnmp
-Docker deploying Nginx MySQL PHP7 in one key, support full feature functions.
+# 透過docker 建立PHP開發環境
+Nginx
+MySQL & phpmyadmin
+PHP7
+ELK
+Mongodb & Mongo-express
+Redis & php-redis-admin
+rabbitmq & rabbitmq-management
 
 ![Demo Image](./dnmp.png)
 
-## 1. Feature
-1. Completely open source.
-2. Support Multiple PHP version(PHP5.4, PHP5.6, PHP7.2) switch.
-3. Support Multiple domains.
-4. Support HTTPS and HTTP/2.
-5. PHP source located in host.
-6. MySQL data directory in host.
-7. All conf files located in host.
-8. All log files located in host.
-9. Built-in PHP extensions install commands.
-10. Promise 100% available.
-11. Supported any OS with docker.
+# 1. 準備docker & git
+Mac
+```
+brew install docker docker-compose docker-machine xhyve docker-machine-driver-xhyve
+```
 
-## 2. Usage
-1. Install `git`, `docker` and `docker-compose`;
-2. Clone project:
-    ```
-    $ git clone https://github.com/yeszao/dnmp.git
-    ```
-4. Start docker containers:
-    ```
-    $ cd dnmp
-    $ docker-compose up
-    ```
-    You may need use `sudo` before this command in Linux.
-5. Go to your browser and type `localhost`, you will see:
+Ubuntu
+```
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
-![Demo Image](./snapshot.png)
+$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
-The index file is located in `./www/site1/`.
+$ sudo apt-get update
 
-## 3. Other PHP version?
+$ apt-cache policy docker-ce
+
+$ sudo apt-get install -y docker-ce git
+
+$ sudo systemctl status docker
+
+$ sudo usermod -aG docker ${USER}
+
+$ docker
+
+$ sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+
+$ sudo chmod +x /usr/local/bin/docker-compose
+
+$ docker-compose --version
+```
+
+
+## 2. 使用
+1. Clone project:
+    ```
+    $ git clone https://github.com/babyandy0111/dev-dnmp.git
+    ```
+2. Start docker containers:
+    ```
+    $ cd dev-dnmp
+    $ docker-compose up -d php nginx ...
+    ```
+3. 打開 http://localhost 你會看到 site1 預設畫面
+
+## 3. 想用其他php版本?
 Default, we start LATEST PHP version by using:
 ```
 $ docker-compose up
