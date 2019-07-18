@@ -1,6 +1,6 @@
 FROM php:7.2-fpm
 
-COPY ./sources.list.stretch /etc/apt/sources.list
+# COPY ./sources.list.stretch /etc/apt/sources.list
 
 # Extensions: ctype, dom, fileinfo, ftp, hash, iconv, json, pdo, pdo_sqlite, session,
 # tokenizer, simplexml, xml, xmlreader, xmlwriter and phar are bundled and compiled into
@@ -13,10 +13,10 @@ COPY ./sources.list.stretch /etc/apt/sources.list
 # 4. xml, xmlrpc, wddx require libxml2-dev and libxslt-dev.
 # 5. Line `&& :\` is just for better reading and do nothing.
 RUN apt-get update \
-    && apt-get install -y libfreetype6-dev libjpeg62-turbo-dev autoconf pkg-config libssl-dev libpng-dev --no-install-recommends apt-utils\
-    && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
-    && docker-php-ext-install gd \
-    && :\
+    && apt-get install --no-install-recommends -y libfreetype6-dev libjpeg62-turbo-dev pkg-config libpng-dev apt-utils \
+#    && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+#    && docker-php-ext-install gd \
+#    && :\
     && apt-get install -y libicu-dev \
     && docker-php-ext-install intl \
     && :\
@@ -104,11 +104,11 @@ RUN pecl install mongodb
 #RUN echo "extension=mongodb.so" >> /usr/local/etc/php/php.ini
 
 # xdebug
-RUN apt install wget
-RUN wget http://xdebug.org/files/xdebug-2.6.0.tgz \
-    && tar -xvzf xdebug-2.6.0.tgz \
-    && cd xdebug-2.6.0 \
-    && phpize \
-    && ./configure \
-    && make \
-    && cp modules/xdebug.so /usr/local/lib/php/extensions/no-debug-non-zts-20170718
+# RUN apt install wget
+# RUN wget http://xdebug.org/files/xdebug-2.6.0.tgz \
+#    && tar -xvzf xdebug-2.6.0.tgz \
+#    && cd xdebug-2.6.0 \
+#    && phpize \
+#    && ./configure \
+#    && make \
+#    && cp modules/xdebug.so /usr/local/lib/php/extensions/no-debug-non-zts-20170718
