@@ -190,12 +190,24 @@ services:
     build: "./nodejs"
     container_name: node
     ports:
-      - "3000:300"
-    environment:
-      - PORT=3000
+      - "3000:3000"
     volumes:
-      - ./www/:/var/www/html/:rw
-    command: npm start
+      - ./nodejs/app/:/app:rw
+    command: bash -c "npm run start"
+
+  springboot:
+    build: "./springboot"
+    container_name: springboot
+    ports:
+      - "8888:8888"
+    links:
+      - mysql:mysql
+    volumes:
+      - ./springboot/app:/app:rw
+      - ~/.m2:/root/.m2:rw
+    networks:
+      - net-springboot
+      - net-mysql
 
 networks:
   net-php:
@@ -203,6 +215,7 @@ networks:
   net-redis:
   net-myadmin:
   net-rabbitmq:
+  net-springboot:
   #net-mongo-express:
   #net-mongo:
   #net-composer:

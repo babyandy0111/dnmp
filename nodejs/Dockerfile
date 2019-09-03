@@ -1,7 +1,6 @@
 FROM node:10
+ENV HOST 0.0.0.0
 RUN mkdir -p /app
 WORKDIR /app
 ADD ./app /app
-RUN npm init -y \
-    && npm install \
-    && npm i -g npm
+EXPOSE 3000
