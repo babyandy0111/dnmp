@@ -1,3 +1,13 @@
 server.name: kibana
-server.host: "0"
-elasticsearch.url: http://localhost:9200
+server.host: "0.0.0.0"
+elasticsearch.url: http://elasticsearch:9200
+
+#elasticsearch.hosts: [ "http://127.0.0.1:9200" ]
+#xpack.monitoring.ui.container.elasticsearch.enabled: true
+
+## X-Pack security credentials
+#
+#elasticsearch.username: elastic
+#elasticsearch.password: changeme
+
+elasticsearch.ssl.verify: false
