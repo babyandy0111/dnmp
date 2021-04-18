@@ -23,3 +23,6 @@ network.bind_host: 0.0.0.0
 #xpack.license.self_generated.type: trial
 #xpack.security.enabled: true
 #xpack.monitoring.collection.enabled: true
+xpack.monitoring.collection.enabled: true
+xpack.monitoring.exporters.remote.type: http
+xpack.monitoring.exporters.remote.host: monitor

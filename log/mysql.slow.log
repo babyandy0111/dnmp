@@ -1,0 +1,1826 @@
+mysqld, Version: 10.5.8-MariaDB-1:10.5.8+maria~focal-log (mariadb.org binary distribution). started with:
+Tcp port: 0  Unix socket: /run/mysqld/mysqld.sock
+Time		    Id Command	Argument
+# Time: 210317  5:32:39
+# User@Host: root[root] @ localhost []
+# Thread_id: 4  Schema: mysql  QC_hit: No
+# Query_time: 0.000286  Lock_time: 0.000000  Rows_sent: 0  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 11
+use mysql;
+SET timestamp=1615959159;
+IF (select count(*) from information_schema.global_variables where
+variable_name='wsrep_on' and variable_value='ON') = 1 THEN
+ALTER TABLE time_zone ENGINE=InnoDB;
+ALTER TABLE time_zone_name ENGINE=InnoDB;
+ALTER TABLE time_zone_transition ENGINE=InnoDB;
+ALTER TABLE time_zone_transition_type ENGINE=InnoDB;
+END IF;
+# Time: 210317  5:32:50
+# User@Host: root[root] @ localhost []
+# Thread_id: 4  Schema: mysql  QC_hit: No
+# Query_time: 0.000282  Lock_time: 0.000000  Rows_sent: 0  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 11
+SET timestamp=1615959170;
+IF (select count(*) from information_schema.global_variables where
+variable_name='wsrep_on' and variable_value='ON') = 1 THEN
+ALTER TABLE time_zone ENGINE=Aria;
+ALTER TABLE time_zone_name ENGINE=Aria;
+ALTER TABLE time_zone_transition ENGINE=Aria;
+ALTER TABLE time_zone_transition_type ENGINE=Aria;
+END IF;
+# Time: 210317  5:32:51
+# User@Host: root[root] @ localhost []
+# Thread_id: 5  Schema: mysql  QC_hit: No
+# Query_time: 0.007056  Lock_time: 0.006130  Rows_sent: 0  Rows_examined: 5
+# Rows_affected: 3  Bytes_sent: 11
+SET timestamp=1615959171;
+DELETE FROM mysql.user WHERE user NOT IN ('mysql.sys', 'mariadb.sys', 'mysqlxsys', 'root') OR host NOT IN ('localhost');
+# User@Host: root[root] @ localhost []
+# Thread_id: 5  Schema: mysql  QC_hit: No
+# Query_time: 0.000051  Lock_time: 0.000021  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 11
+SET timestamp=1615959171;
+DELETE FROM mysql.db WHERE Db='test' OR Db='test\_%';
+mysqld, Version: 10.5.8-MariaDB-1:10.5.8+maria~focal-log (mariadb.org binary distribution). started with:
+Tcp port: 3306  Unix socket: (null)
+Time		    Id Command	Argument
+# Time: 210317  5:41:06
+# User@Host: admin[admin] @  [172.19.0.1]
+# Thread_id: 8  Schema:   QC_hit: No
+# Query_time: 0.000299  Lock_time: 0.000119  Rows_sent: 40  Rows_examined: 80
+# Rows_affected: 0  Bytes_sent: 1084
+SET timestamp=1615959666;
+SELECT * FROM `information_schema`.`character_sets` ORDER BY `character_set_name` ASC;
+# User@Host: admin[admin] @  [172.19.0.1]
+# Thread_id: 8  Schema:   QC_hit: No
+# Query_time: 0.000547  Lock_time: 0.000103  Rows_sent: 33  Rows_examined: 355
+# Rows_affected: 0  Bytes_sent: 690
+SET timestamp=1615959666;
+SELECT * FROM `information_schema`.`collations` WHERE character_set_name = 'utf8mb4' ORDER BY `collation_name` ASC;
+# Time: 210317  5:42:37
+# User@Host: admin[admin] @  [172.19.0.1]
+# Thread_id: 8  Schema: information_schema  QC_hit: No
+# Query_time: 0.014327  Lock_time: 0.012684  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 670
+use information_schema;
+SET timestamp=1615959757;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'information_schema' ORDER BY routine_name;
+# User@Host: admin[admin] @  [172.19.0.1]
+# Thread_id: 9  Schema:   QC_hit: No
+# Query_time: 0.000238  Lock_time: 0.000175  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 242
+SET timestamp=1615959757;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'information_schema';
+# Time: 210317  5:42:49
+# User@Host: admin[admin] @  [172.19.0.1]
+# Thread_id: 8  Schema: information_schema  QC_hit: No
+# Query_time: 0.000144  Lock_time: 0.000068  Rows_sent: 1  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 70
+SET timestamp=1615959769;
+SELECT COUNT(1) FROM `user_variables`;
+# User@Host: admin[admin] @  [172.19.0.1]
+# Thread_id: 8  Schema: information_schema  QC_hit: No
+# Query_time: 0.000399  Lock_time: 0.000091  Rows_sent: 40  Rows_examined: 80
+# Rows_affected: 0  Bytes_sent: 1084
+SET timestamp=1615959769;
+SELECT * FROM `information_schema`.`character_sets` ORDER BY `character_set_name` ASC;
+# User@Host: admin[admin] @  [172.19.0.1]
+# Thread_id: 8  Schema: information_schema  QC_hit: No
+# Query_time: 0.000490  Lock_time: 0.000108  Rows_sent: 34  Rows_examined: 356
+# Rows_affected: 0  Bytes_sent: 695
+SET timestamp=1615959769;
+SELECT * FROM `information_schema`.`collations` WHERE character_set_name = 'utf8' ORDER BY `collation_name` ASC;
+# Time: 210317  5:42:51
+# User@Host: admin[admin] @  [172.19.0.1]
+# Thread_id: 8  Schema: information_schema  QC_hit: No
+# Query_time: 0.000099  Lock_time: 0.000055  Rows_sent: 1  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 70
+SET timestamp=1615959771;
+SELECT COUNT(1) FROM `USER_STATISTICS`;
+# Time: 210317  5:42:53
+# User@Host: admin[admin] @  [172.19.0.1]
+# Thread_id: 8  Schema: information_schema  QC_hit: No
+# Query_time: 0.000093  Lock_time: 0.000047  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 70
+SET timestamp=1615959773;
+SELECT COUNT(1) FROM `USER_PRIVILEGES`;
+# Time: 210317  5:42:54
+# User@Host: admin[admin] @  [172.19.0.1]
+# Thread_id: 8  Schema: information_schema  QC_hit: No
+# Query_time: 0.000173  Lock_time: 0.000081  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 198
+SET timestamp=1615959774;
+SELECT * FROM `USER_PRIVILEGES` LIMIT 0,1000;
+# User@Host: admin[admin] @  [172.19.0.1]
+# Thread_id: 8  Schema: information_schema  QC_hit: No
+# Query_time: 0.000125  Lock_time: 0.000058  Rows_sent: 8  Rows_examined: 8
+# Rows_affected: 0  Bytes_sent: 222
+SET timestamp=1615959774;
+SELECT Engine, Support FROM `information_schema`.`engines` WHERE SUPPORT IN ('DEFAULT', 'YES');
+# Time: 210317  5:42:59
+# User@Host: admin[admin] @  [172.19.0.1]
+# Thread_id: 8  Schema: information_schema  QC_hit: No
+# Query_time: 0.000227  Lock_time: 0.000135  Rows_sent: 1  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 70
+SET timestamp=1615959779;
+SELECT COUNT(1) FROM `USER_STATISTICS`;
+# User@Host: admin[admin] @  [172.19.0.1]
+# Thread_id: 8  Schema: information_schema  QC_hit: No
+# Query_time: 0.000177  Lock_time: 0.000091  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 533
+SET timestamp=1615959779;
+SELECT * FROM `USER_STATISTICS` LIMIT 0,1000;
+# Time: 210317  5:43:00
+# User@Host: admin[admin] @  [172.19.0.1]
+# Thread_id: 8  Schema: information_schema  QC_hit: No
+# Query_time: 0.000101  Lock_time: 0.000056  Rows_sent: 1  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 70
+SET timestamp=1615959780;
+SELECT COUNT(1) FROM `user_variables`;
+# User@Host: admin[admin] @  [172.19.0.1]
+# Thread_id: 8  Schema: information_schema  QC_hit: No
+# Query_time: 0.000160  Lock_time: 0.000085  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 175
+SET timestamp=1615959780;
+SELECT * FROM `user_variables` LIMIT 0,1000;
+# Time: 210317  5:43:01
+# User@Host: admin[admin] @  [172.19.0.1]
+# Thread_id: 8  Schema: information_schema  QC_hit: No
+# Query_time: 0.000113  Lock_time: 0.000057  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 70
+SET timestamp=1615959781;
+SELECT COUNT(1) FROM `USER_PRIVILEGES`;
+# User@Host: admin[admin] @  [172.19.0.1]
+# Thread_id: 8  Schema: information_schema  QC_hit: No
+# Query_time: 0.000185  Lock_time: 0.000081  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 198
+SET timestamp=1615959781;
+SELECT * FROM `USER_PRIVILEGES` LIMIT 0,1000;
+# Time: 210317  5:43:38
+# User@Host: root[root] @  [172.19.0.1]
+# Thread_id: 10  Schema:   QC_hit: No
+# Query_time: 0.000312  Lock_time: 0.000097  Rows_sent: 40  Rows_examined: 80
+# Rows_affected: 0  Bytes_sent: 1084
+SET timestamp=1615959818;
+SELECT * FROM `information_schema`.`character_sets` ORDER BY `character_set_name` ASC;
+# User@Host: root[root] @  [172.19.0.1]
+# Thread_id: 10  Schema:   QC_hit: No
+# Query_time: 0.000576  Lock_time: 0.000118  Rows_sent: 33  Rows_examined: 355
+# Rows_affected: 0  Bytes_sent: 690
+SET timestamp=1615959818;
+SELECT * FROM `information_schema`.`collations` WHERE character_set_name = 'utf8mb4' ORDER BY `collation_name` ASC;
+# Time: 210317  5:43:42
+# User@Host: root[root] @  [172.19.0.1]
+# Thread_id: 10  Schema: indochat  QC_hit: No
+# Query_time: 0.000792  Lock_time: 0.000570  Rows_sent: 0  Rows_examined: 2
+# Rows_affected: 0  Bytes_sent: 670
+use indochat;
+SET timestamp=1615959822;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'indochat' ORDER BY routine_name;
+# User@Host: root[root] @  [172.19.0.1]
+# Thread_id: 11  Schema:   QC_hit: No
+# Query_time: 0.000723  Lock_time: 0.000521  Rows_sent: 0  Rows_examined: 2
+# Rows_affected: 0  Bytes_sent: 242
+SET timestamp=1615959822;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'indochat';
+# Time: 210317  5:45:04
+# User@Host: root[root] @  [172.19.0.1]
+# Thread_id: 14  Schema: indochat  QC_hit: No
+# Query_time: 0.001665  Lock_time: 0.000041  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 333
+SET timestamp=1615959904;
+SELECT `TABLE_NAME`, `ENGINE`, `AUTO_INCREMENT`, `TABLE_COMMENT` from `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`='indochat' AND (`ENGINE`='MyISAM' OR `ENGINE` = 'InnoDB' OR `ENGINE` = 'TokuDB');
+# User@Host: root[root] @  [172.19.0.1]
+# Thread_id: 14  Schema: indochat  QC_hit: No
+# Query_time: 0.006880  Lock_time: 0.006793  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 451
+SET timestamp=1615959904;
+SELECT `p_type`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5` FROM `casbin_rule`;
+# User@Host: root[root] @  [172.19.0.1]
+# Thread_id: 14  Schema: indochat  QC_hit: No
+# Query_time: 0.000079  Lock_time: 0.000027  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 451
+SET timestamp=1615959904;
+SELECT `p_type`, `v0`, `v1`, `v2`, `v3`, `v4`, `v5` FROM `casbin_rule`;
+# Time: 210317  5:50:20
+# User@Host: root[root] @  [172.19.0.1]
+# Thread_id: 17  Schema: indochat  QC_hit: No
+# Query_time: 0.003110  Lock_time: 0.002970  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 155
+SET timestamp=1615960220;
+SELECT * FROM `migrations`;
+# Time: 210317  5:50:57
+# User@Host: admin[admin] @  [172.19.0.1]
+# Thread_id: 18  Schema:   QC_hit: No
+# Query_time: 0.000608  Lock_time: 0.000238  Rows_sent: 40  Rows_examined: 80
+# Rows_affected: 0  Bytes_sent: 1084
+SET timestamp=1615960257;
+SELECT * FROM `information_schema`.`character_sets` ORDER BY `character_set_name` ASC;
+# User@Host: admin[admin] @  [172.19.0.1]
+# Thread_id: 18  Schema:   QC_hit: No
+# Query_time: 0.000741  Lock_time: 0.000189  Rows_sent: 33  Rows_examined: 355
+# Rows_affected: 0  Bytes_sent: 690
+SET timestamp=1615960257;
+SELECT * FROM `information_schema`.`collations` WHERE character_set_name = 'utf8mb4' ORDER BY `collation_name` ASC;
+# Time: 210317  5:51:17
+# User@Host: root[root] @  [172.19.0.1]
+# Thread_id: 20  Schema: indochat  QC_hit: No
+# Query_time: 0.000557  Lock_time: 0.000326  Rows_sent: 2  Rows_examined: 6
+# Rows_affected: 0  Bytes_sent: 1083
+SET timestamp=1615960277;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'indochat' ORDER BY routine_name;
+# User@Host: root[root] @  [172.19.0.1]
+# Thread_id: 21  Schema:   QC_hit: No
+# Query_time: 0.000386  Lock_time: 0.000232  Rows_sent: 2  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 311
+SET timestamp=1615960277;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'indochat';
+mysqld, Version: 10.5.8-MariaDB-1:10.5.8+maria~focal-log (mariadb.org binary distribution). started with:
+Tcp port: 3306  Unix socket: (null)
+Time		    Id Command	Argument
+# Time: 210418  6:58:21
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 3  Schema:   QC_hit: No
+# Query_time: 0.016341  Lock_time: 0.000226  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 107
+SET timestamp=1618729101;
+/* ApplicationName=GoLand 2020.3 */ select table_name from information_schema.tables
+        where table_schema collate utf8_general_ci = 'information_schema'
+          and table_name collate utf8_general_ci = 'parameters';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 3  Schema:   QC_hit: No
+# Query_time: 0.004100  Lock_time: 0.000116  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 107
+SET timestamp=1618729101;
+/* ApplicationName=GoLand 2020.3 */ select table_name from information_schema.tables
+        where table_schema collate utf8_general_ci = 'information_schema'
+          and table_name collate utf8_general_ci = 'parameters';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 3  Schema:   QC_hit: No
+# Query_time: 0.006755  Lock_time: 0.000101  Rows_sent: 4  Rows_examined: 8
+# Rows_affected: 0  Bytes_sent: 341
+SET timestamp=1618729101;
+/* ApplicationName=GoLand 2020.3 */ select schema_name, default_collation_name
+        from information_schema.schemata
+        order by if(schema() = schema_name, 1, 2), schema_name;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 3  Schema:   QC_hit: No
+# Query_time: 0.000524  Lock_time: 0.000075  Rows_sent: 322  Rows_examined: 322
+# Rows_affected: 0  Bytes_sent: 9889
+SET timestamp=1618729101;
+/* ApplicationName=GoLand 2020.3 */ select collation_name, character_set_name,
+          is_default collate utf8_general_ci = 'Yes' as is_default
+        from information_schema.collations;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 3  Schema:   QC_hit: No
+# Query_time: 0.000210  Lock_time: 0.000038  Rows_sent: 4  Rows_examined: 84
+# Rows_affected: 0  Bytes_sent: 188
+SET timestamp=1618729101;
+/* ApplicationName=GoLand 2020.3 */ select grantee from information_schema.user_privileges group by grantee;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 3  Schema:   QC_hit: No
+# Query_time: 0.001387  Lock_time: 0.000108  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 107
+SET timestamp=1618729101;
+/* ApplicationName=GoLand 2020.3 */ select table_name from information_schema.tables
+        where table_schema collate utf8_general_ci = 'information_schema'
+          and table_name collate utf8_general_ci = 'parameters';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 3  Schema:   QC_hit: No
+# Query_time: 0.000297  Lock_time: 0.000071  Rows_sent: 4  Rows_examined: 8
+# Rows_affected: 0  Bytes_sent: 341
+SET timestamp=1618729101;
+/* ApplicationName=GoLand 2020.3 */ select schema_name, default_collation_name
+        from information_schema.schemata
+        order by if(schema() = schema_name, 1, 2), schema_name;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 3  Schema:   QC_hit: No
+# Query_time: 0.063435  Lock_time: 0.000050  Rows_sent: 39  Rows_examined: 39
+# Rows_affected: 0  Bytes_sent: 2625
+SET timestamp=1618729101;
+/* ApplicationName=GoLand 2020.3 */ select table_name, table_type, table_comment, engine, table_collation
+        from information_schema.tables
+        where table_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 3  Schema:   QC_hit: No
+# Query_time: 0.001121  Lock_time: 0.000048  Rows_sent: 308  Rows_examined: 616
+# Rows_affected: 0  Bytes_sent: 21547
+SET timestamp=1618729101;
+/* ApplicationName=GoLand 2020.3 */ select
+        ordinal_position,
+        column_name,
+        column_type,
+        column_default,
+        generation_expression,
+        table_name,
+        column_comment,
+        is_nullable,
+        extra,
+        collation_name
+      from information_schema.columns
+      where table_schema = 'indochat'
+      order by table_name, ordinal_position;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 3  Schema:   QC_hit: No
+# Query_time: 0.088475  Lock_time: 0.088403  Rows_sent: 32  Rows_examined: 105
+# Rows_affected: 0  Bytes_sent: 2636
+SET timestamp=1618729101;
+/* ApplicationName=GoLand 2020.3 */ select
+          table_name,
+          index_name,
+          index_comment,
+          index_type,
+          non_unique,
+          column_name,
+          collation,
+          null expression
+        from information_schema.statistics
+        where table_schema = 'indochat' and
+              index_schema = 'indochat' and
+              index_name collate utf8_general_ci <> 'PRIMARY'
+        order by
+          index_schema,
+          table_name,
+          index_name,
+          seq_in_index;
+# Time: 210418  6:58:22
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 3  Schema:   QC_hit: No
+# Query_time: 0.193850  Lock_time: 0.000071  Rows_sent: 46  Rows_examined: 46
+# Rows_affected: 0  Bytes_sent: 2580
+SET timestamp=1618729102;
+/* ApplicationName=GoLand 2020.3 */ select
+        c.constraint_name,
+        c.table_name,
+        c.constraint_type,
+        r.match_option,
+        r.update_rule,
+        r.delete_rule
+      from information_schema.table_constraints c
+        left join information_schema.referential_constraints r on
+            r.constraint_schema   = c.constraint_schema
+        and r.constraint_name     = c.constraint_name
+      where c.table_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 3  Schema:   QC_hit: No
+# Query_time: 0.000414  Lock_time: 0.000047  Rows_sent: 51  Rows_examined: 102
+# Rows_affected: 0  Bytes_sent: 2709
+SET timestamp=1618729102;
+/* ApplicationName=GoLand 2020.3 */ select
+        constraint_name,
+        table_name,
+        column_name,
+        referenced_table_schema,
+        referenced_table_name,
+        referenced_column_name
+      from information_schema.key_column_usage
+      where table_schema = 'indochat'
+      order by
+          table_name
+        , constraint_name
+        , ordinal_position;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 3  Schema:   QC_hit: No
+# Query_time: 0.000500  Lock_time: 0.000088  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 324
+SET timestamp=1618729102;
+/* ApplicationName=GoLand 2020.3 */ select
+          constraint_name,
+          table_name,
+          check_clause
+        from information_schema.check_constraints
+        where constraint_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 3  Schema:   QC_hit: No
+# Query_time: 0.100797  Lock_time: 0.000059  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 452
+SET timestamp=1618729102;
+/* ApplicationName=GoLand 2020.3 */ select
+          trigger_name,
+          event_object_table,
+          event_manipulation,
+          action_timing,
+          definer
+        from information_schema.triggers
+        where trigger_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 3  Schema:   QC_hit: No
+# Query_time: 0.000384  Lock_time: 0.000315  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 693
+SET timestamp=1618729102;
+/* ApplicationName=GoLand 2020.3 */ select
+          event_name,
+          event_comment,
+          definer,
+          event_type = 'RECURRING' recurring,
+          interval_value,
+          interval_field,
+          cast(coalesce(starts, execute_at) as char) starts,
+          cast(ends as char) ends,
+          status,
+          on_completion = 'PRESERVE' preserve,
+          last_executed
+        from information_schema.events
+        where event_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 3  Schema:   QC_hit: No
+# Query_time: 0.000444  Lock_time: 0.000265  Rows_sent: 2  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 1071
+SET timestamp=1618729102;
+/* ApplicationName=GoLand 2020.3 */ select
+          routine_name,
+          routine_type,
+          routine_definition,
+          routine_comment,
+          dtd_identifier,
+          definer
+        from information_schema.routines
+        where routine_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 3  Schema:   QC_hit: No
+# Query_time: 0.000457  Lock_time: 0.000272  Rows_sent: 6  Rows_examined: 23
+# Rows_affected: 0  Bytes_sent: 736
+SET timestamp=1618729102;
+/* ApplicationName=GoLand 2020.3 */ select specific_name,
+        ordinal_position,
+        parameter_name,
+        parameter_mode,
+        dtd_identifier
+      from information_schema.parameters
+      where specific_schema = 'indochat' and ordinal_position > 0
+      order by specific_name, ordinal_position;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 3  Schema:   QC_hit: No
+# Query_time: 0.000550  Lock_time: 0.000067  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 242
+SET timestamp=1618729102;
+/* ApplicationName=GoLand 2020.3 */ select table_name, view_definition, definer
+      from information_schema.views
+      where table_schema = 'indochat';
+# Time: 210418  6:58:29
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.002094  Lock_time: 0.000124  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 107
+SET timestamp=1618729109;
+/* ApplicationName=GoLand 2020.3 */ select table_name from information_schema.tables
+        where table_schema collate utf8_general_ci = 'information_schema'
+          and table_name collate utf8_general_ci = 'parameters';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.001543  Lock_time: 0.000153  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 107
+SET timestamp=1618729109;
+/* ApplicationName=GoLand 2020.3 */ select table_name from information_schema.tables
+        where table_schema collate utf8_general_ci = 'information_schema'
+          and table_name collate utf8_general_ci = 'parameters';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.000627  Lock_time: 0.000114  Rows_sent: 4  Rows_examined: 8
+# Rows_affected: 0  Bytes_sent: 341
+SET timestamp=1618729109;
+/* ApplicationName=GoLand 2020.3 */ select schema_name, default_collation_name
+        from information_schema.schemata
+        order by if(schema() = schema_name, 1, 2), schema_name;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.000492  Lock_time: 0.000079  Rows_sent: 322  Rows_examined: 322
+# Rows_affected: 0  Bytes_sent: 9889
+SET timestamp=1618729109;
+/* ApplicationName=GoLand 2020.3 */ select collation_name, character_set_name,
+          is_default collate utf8_general_ci = 'Yes' as is_default
+        from information_schema.collations;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.000197  Lock_time: 0.000061  Rows_sent: 4  Rows_examined: 84
+# Rows_affected: 0  Bytes_sent: 188
+SET timestamp=1618729109;
+/* ApplicationName=GoLand 2020.3 */ select grantee from information_schema.user_privileges group by grantee;
+# Time: 210418  6:58:30
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.001191  Lock_time: 0.000095  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 107
+SET timestamp=1618729110;
+/* ApplicationName=GoLand 2020.3 */ select table_name from information_schema.tables
+        where table_schema collate utf8_general_ci = 'information_schema'
+          and table_name collate utf8_general_ci = 'parameters';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.000258  Lock_time: 0.000045  Rows_sent: 4  Rows_examined: 8
+# Rows_affected: 0  Bytes_sent: 341
+SET timestamp=1618729110;
+/* ApplicationName=GoLand 2020.3 */ select schema_name, default_collation_name
+        from information_schema.schemata
+        order by if(schema() = schema_name, 1, 2), schema_name;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.000440  Lock_time: 0.000047  Rows_sent: 39  Rows_examined: 39
+# Rows_affected: 0  Bytes_sent: 2625
+SET timestamp=1618729110;
+/* ApplicationName=GoLand 2020.3 */ select table_name, table_type, table_comment, engine, table_collation
+        from information_schema.tables
+        where table_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.001205  Lock_time: 0.000050  Rows_sent: 308  Rows_examined: 616
+# Rows_affected: 0  Bytes_sent: 21547
+SET timestamp=1618729110;
+/* ApplicationName=GoLand 2020.3 */ select
+        ordinal_position,
+        column_name,
+        column_type,
+        column_default,
+        generation_expression,
+        table_name,
+        column_comment,
+        is_nullable,
+        extra,
+        collation_name
+      from information_schema.columns
+      where table_schema = 'indochat'
+      order by table_name, ordinal_position;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.000588  Lock_time: 0.000062  Rows_sent: 32  Rows_examined: 105
+# Rows_affected: 0  Bytes_sent: 2636
+SET timestamp=1618729110;
+/* ApplicationName=GoLand 2020.3 */ select
+          table_name,
+          index_name,
+          index_comment,
+          index_type,
+          non_unique,
+          column_name,
+          collation,
+          null expression
+        from information_schema.statistics
+        where table_schema = 'indochat' and
+              index_schema = 'indochat' and
+              index_name collate utf8_general_ci <> 'PRIMARY'
+        order by
+          index_schema,
+          table_name,
+          index_name,
+          seq_in_index;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.006653  Lock_time: 0.000073  Rows_sent: 46  Rows_examined: 46
+# Rows_affected: 0  Bytes_sent: 2580
+SET timestamp=1618729110;
+/* ApplicationName=GoLand 2020.3 */ select
+        c.constraint_name,
+        c.table_name,
+        c.constraint_type,
+        r.match_option,
+        r.update_rule,
+        r.delete_rule
+      from information_schema.table_constraints c
+        left join information_schema.referential_constraints r on
+            r.constraint_schema   = c.constraint_schema
+        and r.constraint_name     = c.constraint_name
+      where c.table_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.000768  Lock_time: 0.000057  Rows_sent: 51  Rows_examined: 102
+# Rows_affected: 0  Bytes_sent: 2709
+SET timestamp=1618729110;
+/* ApplicationName=GoLand 2020.3 */ select
+        constraint_name,
+        table_name,
+        column_name,
+        referenced_table_schema,
+        referenced_table_name,
+        referenced_column_name
+      from information_schema.key_column_usage
+      where table_schema = 'indochat'
+      order by
+          table_name
+        , constraint_name
+        , ordinal_position;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.000403  Lock_time: 0.000068  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 324
+SET timestamp=1618729110;
+/* ApplicationName=GoLand 2020.3 */ select
+          constraint_name,
+          table_name,
+          check_clause
+        from information_schema.check_constraints
+        where constraint_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.136445  Lock_time: 0.000074  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 452
+SET timestamp=1618729110;
+/* ApplicationName=GoLand 2020.3 */ select
+          trigger_name,
+          event_object_table,
+          event_manipulation,
+          action_timing,
+          definer
+        from information_schema.triggers
+        where trigger_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.000363  Lock_time: 0.000296  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 693
+SET timestamp=1618729110;
+/* ApplicationName=GoLand 2020.3 */ select
+          event_name,
+          event_comment,
+          definer,
+          event_type = 'RECURRING' recurring,
+          interval_value,
+          interval_field,
+          cast(coalesce(starts, execute_at) as char) starts,
+          cast(ends as char) ends,
+          status,
+          on_completion = 'PRESERVE' preserve,
+          last_executed
+        from information_schema.events
+        where event_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.000450  Lock_time: 0.000281  Rows_sent: 2  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 1071
+SET timestamp=1618729110;
+/* ApplicationName=GoLand 2020.3 */ select
+          routine_name,
+          routine_type,
+          routine_definition,
+          routine_comment,
+          dtd_identifier,
+          definer
+        from information_schema.routines
+        where routine_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.000561  Lock_time: 0.000311  Rows_sent: 6  Rows_examined: 23
+# Rows_affected: 0  Bytes_sent: 736
+SET timestamp=1618729110;
+/* ApplicationName=GoLand 2020.3 */ select specific_name,
+        ordinal_position,
+        parameter_name,
+        parameter_mode,
+        dtd_identifier
+      from information_schema.parameters
+      where specific_schema = 'indochat' and ordinal_position > 0
+      order by specific_name, ordinal_position;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.000745  Lock_time: 0.000052  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 242
+SET timestamp=1618729110;
+/* ApplicationName=GoLand 2020.3 */ select table_name, view_definition, definer
+      from information_schema.views
+      where table_schema = 'indochat';
+# Time: 210418  6:58:40
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 6  Schema:   QC_hit: No
+# Query_time: 0.001357  Lock_time: 0.000104  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 107
+SET timestamp=1618729120;
+/* ApplicationName=GoLand 2020.3 */ select table_name from information_schema.tables
+        where table_schema collate utf8_general_ci = 'information_schema'
+          and table_name collate utf8_general_ci = 'parameters';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 6  Schema:   QC_hit: No
+# Query_time: 0.001465  Lock_time: 0.000118  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 107
+SET timestamp=1618729120;
+/* ApplicationName=GoLand 2020.3 */ select table_name from information_schema.tables
+        where table_schema collate utf8_general_ci = 'information_schema'
+          and table_name collate utf8_general_ci = 'parameters';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 6  Schema:   QC_hit: No
+# Query_time: 0.000549  Lock_time: 0.000114  Rows_sent: 4  Rows_examined: 8
+# Rows_affected: 0  Bytes_sent: 341
+SET timestamp=1618729120;
+/* ApplicationName=GoLand 2020.3 */ select schema_name, default_collation_name
+        from information_schema.schemata
+        order by if(schema() = schema_name, 1, 2), schema_name;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 6  Schema:   QC_hit: No
+# Query_time: 0.000276  Lock_time: 0.000077  Rows_sent: 322  Rows_examined: 322
+# Rows_affected: 0  Bytes_sent: 9889
+SET timestamp=1618729120;
+/* ApplicationName=GoLand 2020.3 */ select collation_name, character_set_name,
+          is_default collate utf8_general_ci = 'Yes' as is_default
+        from information_schema.collations;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 6  Schema:   QC_hit: No
+# Query_time: 0.000142  Lock_time: 0.000037  Rows_sent: 4  Rows_examined: 84
+# Rows_affected: 0  Bytes_sent: 188
+SET timestamp=1618729120;
+/* ApplicationName=GoLand 2020.3 */ select grantee from information_schema.user_privileges group by grantee;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 6  Schema:   QC_hit: No
+# Query_time: 0.001453  Lock_time: 0.000149  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 107
+SET timestamp=1618729120;
+/* ApplicationName=GoLand 2020.3 */ select table_name from information_schema.tables
+        where table_schema collate utf8_general_ci = 'information_schema'
+          and table_name collate utf8_general_ci = 'parameters';
+# Time: 210418  6:58:41
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 6  Schema:   QC_hit: No
+# Query_time: 0.000366  Lock_time: 0.000077  Rows_sent: 4  Rows_examined: 8
+# Rows_affected: 0  Bytes_sent: 341
+SET timestamp=1618729121;
+/* ApplicationName=GoLand 2020.3 */ select schema_name, default_collation_name
+        from information_schema.schemata
+        order by if(schema() = schema_name, 1, 2), schema_name;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 6  Schema:   QC_hit: No
+# Query_time: 0.000499  Lock_time: 0.000076  Rows_sent: 39  Rows_examined: 39
+# Rows_affected: 0  Bytes_sent: 2625
+SET timestamp=1618729121;
+/* ApplicationName=GoLand 2020.3 */ select table_name, table_type, table_comment, engine, table_collation
+        from information_schema.tables
+        where table_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 6  Schema:   QC_hit: No
+# Query_time: 0.002481  Lock_time: 0.000137  Rows_sent: 308  Rows_examined: 616
+# Rows_affected: 0  Bytes_sent: 21547
+SET timestamp=1618729121;
+/* ApplicationName=GoLand 2020.3 */ select
+        ordinal_position,
+        column_name,
+        column_type,
+        column_default,
+        generation_expression,
+        table_name,
+        column_comment,
+        is_nullable,
+        extra,
+        collation_name
+      from information_schema.columns
+      where table_schema = 'indochat'
+      order by table_name, ordinal_position;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 6  Schema:   QC_hit: No
+# Query_time: 0.000861  Lock_time: 0.000100  Rows_sent: 32  Rows_examined: 105
+# Rows_affected: 0  Bytes_sent: 2636
+SET timestamp=1618729121;
+/* ApplicationName=GoLand 2020.3 */ select
+          table_name,
+          index_name,
+          index_comment,
+          index_type,
+          non_unique,
+          column_name,
+          collation,
+          null expression
+        from information_schema.statistics
+        where table_schema = 'indochat' and
+              index_schema = 'indochat' and
+              index_name collate utf8_general_ci <> 'PRIMARY'
+        order by
+          index_schema,
+          table_name,
+          index_name,
+          seq_in_index;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 6  Schema:   QC_hit: No
+# Query_time: 0.007988  Lock_time: 0.000131  Rows_sent: 46  Rows_examined: 46
+# Rows_affected: 0  Bytes_sent: 2580
+SET timestamp=1618729121;
+/* ApplicationName=GoLand 2020.3 */ select
+        c.constraint_name,
+        c.table_name,
+        c.constraint_type,
+        r.match_option,
+        r.update_rule,
+        r.delete_rule
+      from information_schema.table_constraints c
+        left join information_schema.referential_constraints r on
+            r.constraint_schema   = c.constraint_schema
+        and r.constraint_name     = c.constraint_name
+      where c.table_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 6  Schema:   QC_hit: No
+# Query_time: 0.000940  Lock_time: 0.000097  Rows_sent: 51  Rows_examined: 102
+# Rows_affected: 0  Bytes_sent: 2709
+SET timestamp=1618729121;
+/* ApplicationName=GoLand 2020.3 */ select
+        constraint_name,
+        table_name,
+        column_name,
+        referenced_table_schema,
+        referenced_table_name,
+        referenced_column_name
+      from information_schema.key_column_usage
+      where table_schema = 'indochat'
+      order by
+          table_name
+        , constraint_name
+        , ordinal_position;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 6  Schema:   QC_hit: No
+# Query_time: 0.000486  Lock_time: 0.000102  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 324
+SET timestamp=1618729121;
+/* ApplicationName=GoLand 2020.3 */ select
+          constraint_name,
+          table_name,
+          check_clause
+        from information_schema.check_constraints
+        where constraint_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 6  Schema:   QC_hit: No
+# Query_time: 0.148874  Lock_time: 0.000063  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 452
+SET timestamp=1618729121;
+/* ApplicationName=GoLand 2020.3 */ select
+          trigger_name,
+          event_object_table,
+          event_manipulation,
+          action_timing,
+          definer
+        from information_schema.triggers
+        where trigger_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 6  Schema:   QC_hit: No
+# Query_time: 0.000451  Lock_time: 0.000374  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 693
+SET timestamp=1618729121;
+/* ApplicationName=GoLand 2020.3 */ select
+          event_name,
+          event_comment,
+          definer,
+          event_type = 'RECURRING' recurring,
+          interval_value,
+          interval_field,
+          cast(coalesce(starts, execute_at) as char) starts,
+          cast(ends as char) ends,
+          status,
+          on_completion = 'PRESERVE' preserve,
+          last_executed
+        from information_schema.events
+        where event_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 6  Schema:   QC_hit: No
+# Query_time: 0.000757  Lock_time: 0.000538  Rows_sent: 2  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 1071
+SET timestamp=1618729121;
+/* ApplicationName=GoLand 2020.3 */ select
+          routine_name,
+          routine_type,
+          routine_definition,
+          routine_comment,
+          dtd_identifier,
+          definer
+        from information_schema.routines
+        where routine_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 6  Schema:   QC_hit: No
+# Query_time: 0.000672  Lock_time: 0.000424  Rows_sent: 6  Rows_examined: 23
+# Rows_affected: 0  Bytes_sent: 736
+SET timestamp=1618729121;
+/* ApplicationName=GoLand 2020.3 */ select specific_name,
+        ordinal_position,
+        parameter_name,
+        parameter_mode,
+        dtd_identifier
+      from information_schema.parameters
+      where specific_schema = 'indochat' and ordinal_position > 0
+      order by specific_name, ordinal_position;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 6  Schema:   QC_hit: No
+# Query_time: 0.000746  Lock_time: 0.000072  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 242
+SET timestamp=1618729121;
+/* ApplicationName=GoLand 2020.3 */ select table_name, view_definition, definer
+      from information_schema.views
+      where table_schema = 'indochat';
+# Time: 210418  6:59:20
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 8  Schema: indochat  QC_hit: No
+# Query_time: 0.001766  Lock_time: 0.001066  Rows_sent: 2  Rows_examined: 6
+# Rows_affected: 0  Bytes_sent: 1083
+use indochat;
+SET timestamp=1618729160;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'indochat' ORDER BY routine_name;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 9  Schema:   QC_hit: No
+# Query_time: 0.000301  Lock_time: 0.000167  Rows_sent: 2  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 311
+SET timestamp=1618729160;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'indochat';
+# Time: 210418  6:59:23
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 8  Schema: indochat  QC_hit: No
+# Query_time: 0.000229  Lock_time: 0.000103  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 281
+SET timestamp=1618729163;
+SELECT * FROM `user` LIMIT 0,1000;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 8  Schema: indochat  QC_hit: No
+# Query_time: 0.000908  Lock_time: 0.000051  Rows_sent: 8  Rows_examined: 8
+# Rows_affected: 0  Bytes_sent: 222
+SET timestamp=1618729163;
+SELECT Engine, Support FROM `information_schema`.`engines` WHERE SUPPORT IN ('DEFAULT', 'YES');
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 8  Schema: indochat  QC_hit: No
+# Query_time: 0.000417  Lock_time: 0.000193  Rows_sent: 40  Rows_examined: 80
+# Rows_affected: 0  Bytes_sent: 1085
+SET timestamp=1618729163;
+SELECT * FROM `information_schema`.`character_sets` ORDER BY `character_set_name` ASC;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 8  Schema: indochat  QC_hit: No
+# Query_time: 0.000460  Lock_time: 0.000252  Rows_sent: 33  Rows_examined: 355
+# Rows_affected: 0  Bytes_sent: 692
+SET timestamp=1618729163;
+SELECT * FROM `information_schema`.`collations` WHERE character_set_name = 'utf8mb4' ORDER BY `collation_name` ASC;
+# Time: 210418  6:59:44
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 7  Schema: indochat  QC_hit: No
+# Query_time: 0.000220  Lock_time: 0.000062  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 724
+SET timestamp=1618729184;
+/* ApplicationName=GoLand 2020.3 */ select * from user;
+# Time: 210418  7:02:53
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 10  Schema:   QC_hit: No
+# Query_time: 0.001518  Lock_time: 0.000156  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 107
+SET timestamp=1618729373;
+/* ApplicationName=GoLand 2020.3 */ select table_name from information_schema.tables
+        where table_schema collate utf8_general_ci = 'information_schema'
+          and table_name collate utf8_general_ci = 'parameters';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 10  Schema:   QC_hit: No
+# Query_time: 0.002045  Lock_time: 0.000119  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 107
+SET timestamp=1618729373;
+/* ApplicationName=GoLand 2020.3 */ select table_name from information_schema.tables
+        where table_schema collate utf8_general_ci = 'information_schema'
+          and table_name collate utf8_general_ci = 'parameters';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 10  Schema:   QC_hit: No
+# Query_time: 0.000296  Lock_time: 0.000052  Rows_sent: 4  Rows_examined: 8
+# Rows_affected: 0  Bytes_sent: 341
+SET timestamp=1618729373;
+/* ApplicationName=GoLand 2020.3 */ select schema_name, default_collation_name
+        from information_schema.schemata
+        order by if(schema() = schema_name, 1, 2), schema_name;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 10  Schema:   QC_hit: No
+# Query_time: 0.000271  Lock_time: 0.000053  Rows_sent: 322  Rows_examined: 322
+# Rows_affected: 0  Bytes_sent: 9889
+SET timestamp=1618729373;
+/* ApplicationName=GoLand 2020.3 */ select collation_name, character_set_name,
+          is_default collate utf8_general_ci = 'Yes' as is_default
+        from information_schema.collations;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 10  Schema:   QC_hit: No
+# Query_time: 0.000142  Lock_time: 0.000034  Rows_sent: 4  Rows_examined: 84
+# Rows_affected: 0  Bytes_sent: 188
+SET timestamp=1618729373;
+/* ApplicationName=GoLand 2020.3 */ select grantee from information_schema.user_privileges group by grantee;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 10  Schema:   QC_hit: No
+# Query_time: 0.000719  Lock_time: 0.000052  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 107
+SET timestamp=1618729373;
+/* ApplicationName=GoLand 2020.3 */ select table_name from information_schema.tables
+        where table_schema collate utf8_general_ci = 'information_schema'
+          and table_name collate utf8_general_ci = 'parameters';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 10  Schema:   QC_hit: No
+# Query_time: 0.000236  Lock_time: 0.000040  Rows_sent: 4  Rows_examined: 8
+# Rows_affected: 0  Bytes_sent: 341
+SET timestamp=1618729373;
+/* ApplicationName=GoLand 2020.3 */ select schema_name, default_collation_name
+        from information_schema.schemata
+        order by if(schema() = schema_name, 1, 2), schema_name;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 10  Schema:   QC_hit: No
+# Query_time: 0.000490  Lock_time: 0.000078  Rows_sent: 39  Rows_examined: 39
+# Rows_affected: 0  Bytes_sent: 2625
+SET timestamp=1618729373;
+/* ApplicationName=GoLand 2020.3 */ select table_name, table_type, table_comment, engine, table_collation
+        from information_schema.tables
+        where table_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 10  Schema:   QC_hit: No
+# Query_time: 0.001267  Lock_time: 0.000079  Rows_sent: 308  Rows_examined: 616
+# Rows_affected: 0  Bytes_sent: 21547
+SET timestamp=1618729373;
+/* ApplicationName=GoLand 2020.3 */ select
+        ordinal_position,
+        column_name,
+        column_type,
+        column_default,
+        generation_expression,
+        table_name,
+        column_comment,
+        is_nullable,
+        extra,
+        collation_name
+      from information_schema.columns
+      where table_schema = 'indochat'
+      order by table_name, ordinal_position;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 10  Schema:   QC_hit: No
+# Query_time: 0.000657  Lock_time: 0.000059  Rows_sent: 32  Rows_examined: 105
+# Rows_affected: 0  Bytes_sent: 2636
+SET timestamp=1618729373;
+/* ApplicationName=GoLand 2020.3 */ select
+          table_name,
+          index_name,
+          index_comment,
+          index_type,
+          non_unique,
+          column_name,
+          collation,
+          null expression
+        from information_schema.statistics
+        where table_schema = 'indochat' and
+              index_schema = 'indochat' and
+              index_name collate utf8_general_ci <> 'PRIMARY'
+        order by
+          index_schema,
+          table_name,
+          index_name,
+          seq_in_index;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 10  Schema:   QC_hit: No
+# Query_time: 0.004244  Lock_time: 0.000053  Rows_sent: 46  Rows_examined: 46
+# Rows_affected: 0  Bytes_sent: 2580
+SET timestamp=1618729373;
+/* ApplicationName=GoLand 2020.3 */ select
+        c.constraint_name,
+        c.table_name,
+        c.constraint_type,
+        r.match_option,
+        r.update_rule,
+        r.delete_rule
+      from information_schema.table_constraints c
+        left join information_schema.referential_constraints r on
+            r.constraint_schema   = c.constraint_schema
+        and r.constraint_name     = c.constraint_name
+      where c.table_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 10  Schema:   QC_hit: No
+# Query_time: 0.000509  Lock_time: 0.000052  Rows_sent: 51  Rows_examined: 102
+# Rows_affected: 0  Bytes_sent: 2709
+SET timestamp=1618729373;
+/* ApplicationName=GoLand 2020.3 */ select
+        constraint_name,
+        table_name,
+        column_name,
+        referenced_table_schema,
+        referenced_table_name,
+        referenced_column_name
+      from information_schema.key_column_usage
+      where table_schema = 'indochat'
+      order by
+          table_name
+        , constraint_name
+        , ordinal_position;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 10  Schema:   QC_hit: No
+# Query_time: 0.000352  Lock_time: 0.000052  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 324
+SET timestamp=1618729373;
+/* ApplicationName=GoLand 2020.3 */ select
+          constraint_name,
+          table_name,
+          check_clause
+        from information_schema.check_constraints
+        where constraint_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 10  Schema:   QC_hit: No
+# Query_time: 0.112991  Lock_time: 0.000058  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 452
+SET timestamp=1618729373;
+/* ApplicationName=GoLand 2020.3 */ select
+          trigger_name,
+          event_object_table,
+          event_manipulation,
+          action_timing,
+          definer
+        from information_schema.triggers
+        where trigger_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 10  Schema:   QC_hit: No
+# Query_time: 0.000415  Lock_time: 0.000337  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 693
+SET timestamp=1618729373;
+/* ApplicationName=GoLand 2020.3 */ select
+          event_name,
+          event_comment,
+          definer,
+          event_type = 'RECURRING' recurring,
+          interval_value,
+          interval_field,
+          cast(coalesce(starts, execute_at) as char) starts,
+          cast(ends as char) ends,
+          status,
+          on_completion = 'PRESERVE' preserve,
+          last_executed
+        from information_schema.events
+        where event_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 10  Schema:   QC_hit: No
+# Query_time: 0.000451  Lock_time: 0.000293  Rows_sent: 2  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 1071
+SET timestamp=1618729373;
+/* ApplicationName=GoLand 2020.3 */ select
+          routine_name,
+          routine_type,
+          routine_definition,
+          routine_comment,
+          dtd_identifier,
+          definer
+        from information_schema.routines
+        where routine_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 10  Schema:   QC_hit: No
+# Query_time: 0.000473  Lock_time: 0.000279  Rows_sent: 6  Rows_examined: 23
+# Rows_affected: 0  Bytes_sent: 736
+SET timestamp=1618729373;
+/* ApplicationName=GoLand 2020.3 */ select specific_name,
+        ordinal_position,
+        parameter_name,
+        parameter_mode,
+        dtd_identifier
+      from information_schema.parameters
+      where specific_schema = 'indochat' and ordinal_position > 0
+      order by specific_name, ordinal_position;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 10  Schema:   QC_hit: No
+# Query_time: 0.000560  Lock_time: 0.000044  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 242
+SET timestamp=1618729373;
+/* ApplicationName=GoLand 2020.3 */ select table_name, view_definition, definer
+      from information_schema.views
+      where table_schema = 'indochat';
+# Time: 210418  7:03:27
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 12  Schema:   QC_hit: No
+# Query_time: 0.010448  Lock_time: 0.000139  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 107
+SET timestamp=1618729407;
+/* ApplicationName=GoLand 2020.3 */ select table_name from information_schema.tables
+        where table_schema collate utf8_general_ci = 'information_schema'
+          and table_name collate utf8_general_ci = 'parameters';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 12  Schema:   QC_hit: No
+# Query_time: 0.005731  Lock_time: 0.000118  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 107
+SET timestamp=1618729407;
+/* ApplicationName=GoLand 2020.3 */ select table_name from information_schema.tables
+        where table_schema collate utf8_general_ci = 'information_schema'
+          and table_name collate utf8_general_ci = 'parameters';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 12  Schema:   QC_hit: No
+# Query_time: 0.000386  Lock_time: 0.000074  Rows_sent: 5  Rows_examined: 10
+# Rows_affected: 0  Bytes_sent: 376
+SET timestamp=1618729407;
+/* ApplicationName=GoLand 2020.3 */ select schema_name, default_collation_name
+        from information_schema.schemata
+        order by if(schema() = schema_name, 1, 2), schema_name;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 12  Schema:   QC_hit: No
+# Query_time: 0.000315  Lock_time: 0.000072  Rows_sent: 322  Rows_examined: 322
+# Rows_affected: 0  Bytes_sent: 9889
+SET timestamp=1618729407;
+/* ApplicationName=GoLand 2020.3 */ select collation_name, character_set_name,
+          is_default collate utf8_general_ci = 'Yes' as is_default
+        from information_schema.collations;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 12  Schema:   QC_hit: No
+# Query_time: 0.000169  Lock_time: 0.000040  Rows_sent: 4  Rows_examined: 84
+# Rows_affected: 0  Bytes_sent: 188
+SET timestamp=1618729407;
+/* ApplicationName=GoLand 2020.3 */ select grantee from information_schema.user_privileges group by grantee;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 12  Schema:   QC_hit: No
+# Query_time: 0.000730  Lock_time: 0.000056  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 107
+SET timestamp=1618729407;
+/* ApplicationName=GoLand 2020.3 */ select table_name from information_schema.tables
+        where table_schema collate utf8_general_ci = 'information_schema'
+          and table_name collate utf8_general_ci = 'parameters';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 12  Schema:   QC_hit: No
+# Query_time: 0.000212  Lock_time: 0.000043  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 404
+SET timestamp=1618729407;
+/* ApplicationName=GoLand 2020.3 */ select table_name, table_type, table_comment, engine, table_collation
+        from information_schema.tables
+        where table_schema = 'schema_name';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 12  Schema:   QC_hit: No
+# Query_time: 0.000539  Lock_time: 0.000052  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 850
+SET timestamp=1618729407;
+/* ApplicationName=GoLand 2020.3 */ select
+        ordinal_position,
+        column_name,
+        column_type,
+        column_default,
+        generation_expression,
+        table_name,
+        column_comment,
+        is_nullable,
+        extra,
+        collation_name
+      from information_schema.columns
+      where table_schema = 'schema_name'
+      order by table_name, ordinal_position;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 12  Schema:   QC_hit: No
+# Query_time: 0.000224  Lock_time: 0.000054  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 646
+SET timestamp=1618729407;
+/* ApplicationName=GoLand 2020.3 */ select
+          table_name,
+          index_name,
+          index_comment,
+          index_type,
+          non_unique,
+          column_name,
+          collation,
+          null expression
+        from information_schema.statistics
+        where table_schema = 'schema_name' and
+              index_schema = 'schema_name' and
+              index_name collate utf8_general_ci <> 'PRIMARY'
+        order by
+          index_schema,
+          table_name,
+          index_name,
+          seq_in_index;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 12  Schema:   QC_hit: No
+# Query_time: 0.004676  Lock_time: 0.000054  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 554
+SET timestamp=1618729407;
+/* ApplicationName=GoLand 2020.3 */ select
+        c.constraint_name,
+        c.table_name,
+        c.constraint_type,
+        r.match_option,
+        r.update_rule,
+        r.delete_rule
+      from information_schema.table_constraints c
+        left join information_schema.referential_constraints r on
+            r.constraint_schema   = c.constraint_schema
+        and r.constraint_name     = c.constraint_name
+      where c.table_schema = 'schema_name';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 12  Schema:   QC_hit: No
+# Query_time: 0.000268  Lock_time: 0.000050  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 676
+SET timestamp=1618729407;
+/* ApplicationName=GoLand 2020.3 */ select
+        constraint_name,
+        table_name,
+        column_name,
+        referenced_table_schema,
+        referenced_table_name,
+        referenced_column_name
+      from information_schema.key_column_usage
+      where table_schema = 'schema_name'
+      order by
+          table_name
+        , constraint_name
+        , ordinal_position;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 12  Schema:   QC_hit: No
+# Query_time: 0.000677  Lock_time: 0.000066  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 324
+SET timestamp=1618729407;
+/* ApplicationName=GoLand 2020.3 */ select
+          constraint_name,
+          table_name,
+          check_clause
+        from information_schema.check_constraints
+        where constraint_schema = 'schema_name';
+# Time: 210418  7:03:28
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 12  Schema:   QC_hit: No
+# Query_time: 0.126264  Lock_time: 0.000118  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 452
+SET timestamp=1618729408;
+/* ApplicationName=GoLand 2020.3 */ select
+          trigger_name,
+          event_object_table,
+          event_manipulation,
+          action_timing,
+          definer
+        from information_schema.triggers
+        where trigger_schema = 'schema_name';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 12  Schema:   QC_hit: No
+# Query_time: 0.000443  Lock_time: 0.000348  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 693
+SET timestamp=1618729408;
+/* ApplicationName=GoLand 2020.3 */ select
+          event_name,
+          event_comment,
+          definer,
+          event_type = 'RECURRING' recurring,
+          interval_value,
+          interval_field,
+          cast(coalesce(starts, execute_at) as char) starts,
+          cast(ends as char) ends,
+          status,
+          on_completion = 'PRESERVE' preserve,
+          last_executed
+        from information_schema.events
+        where event_schema = 'schema_name';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 12  Schema:   QC_hit: No
+# Query_time: 0.000486  Lock_time: 0.000330  Rows_sent: 0  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 532
+SET timestamp=1618729408;
+/* ApplicationName=GoLand 2020.3 */ select
+          routine_name,
+          routine_type,
+          routine_definition,
+          routine_comment,
+          dtd_identifier,
+          definer
+        from information_schema.routines
+        where routine_schema = 'schema_name';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 12  Schema:   QC_hit: No
+# Query_time: 0.000448  Lock_time: 0.000269  Rows_sent: 0  Rows_examined: 17
+# Rows_affected: 0  Bytes_sent: 478
+SET timestamp=1618729408;
+/* ApplicationName=GoLand 2020.3 */ select specific_name,
+        ordinal_position,
+        parameter_name,
+        parameter_mode,
+        dtd_identifier
+      from information_schema.parameters
+      where specific_schema = 'schema_name' and ordinal_position > 0
+      order by specific_name, ordinal_position;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 12  Schema:   QC_hit: No
+# Query_time: 0.000453  Lock_time: 0.000055  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 242
+SET timestamp=1618729408;
+/* ApplicationName=GoLand 2020.3 */ select table_name, view_definition, definer
+      from information_schema.views
+      where table_schema = 'schema_name';
+# Time: 210418  7:03:42
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 8  Schema: indochat  QC_hit: No
+# Query_time: 0.002360  Lock_time: 0.001634  Rows_sent: 2  Rows_examined: 6
+# Rows_affected: 0  Bytes_sent: 1083
+SET timestamp=1618729422;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'indochat' ORDER BY routine_name;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 8  Schema: indochat  QC_hit: No
+# Query_time: 0.000068  Lock_time: 0.000023  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 281
+SET timestamp=1618729422;
+SELECT * FROM `user` LIMIT 0,1000;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 9  Schema:   QC_hit: No
+# Query_time: 0.000278  Lock_time: 0.000151  Rows_sent: 2  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 311
+SET timestamp=1618729422;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'indochat';
+# Time: 210418  7:04:16
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 13  Schema: schema_name  QC_hit: No
+# Query_time: 0.002031  Lock_time: 0.001159  Rows_sent: 0  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 670
+use schema_name;
+SET timestamp=1618729456;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'schema_name' ORDER BY routine_name;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 14  Schema:   QC_hit: No
+# Query_time: 0.001806  Lock_time: 0.001224  Rows_sent: 0  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 242
+SET timestamp=1618729456;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'schema_name';
+# Time: 210418  7:06:04
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 13  Schema: schema_name  QC_hit: No
+# Query_time: 0.001592  Lock_time: 0.001016  Rows_sent: 0  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 670
+SET timestamp=1618729564;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'schema_name' ORDER BY routine_name;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 14  Schema:   QC_hit: No
+# Query_time: 0.001807  Lock_time: 0.001216  Rows_sent: 0  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 242
+SET timestamp=1618729564;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'schema_name';
+# Time: 210418  7:06:05
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 13  Schema: schema_name  QC_hit: No
+# Query_time: 0.002276  Lock_time: 0.001290  Rows_sent: 0  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 670
+SET timestamp=1618729565;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'schema_name' ORDER BY routine_name;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 14  Schema:   QC_hit: No
+# Query_time: 0.001455  Lock_time: 0.000973  Rows_sent: 0  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 242
+SET timestamp=1618729565;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'schema_name';
+# Time: 210418  7:06:06
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 13  Schema: schema_name  QC_hit: No
+# Query_time: 0.001968  Lock_time: 0.001063  Rows_sent: 0  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 670
+SET timestamp=1618729566;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'schema_name' ORDER BY routine_name;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 14  Schema:   QC_hit: No
+# Query_time: 0.001769  Lock_time: 0.001157  Rows_sent: 0  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 242
+SET timestamp=1618729566;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'schema_name';
+# Time: 210418  7:07:27
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.006500  Lock_time: 0.000094  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 107
+SET timestamp=1618729647;
+/* ApplicationName=GoLand 2020.3 */ select table_name from information_schema.tables
+        where table_schema collate utf8_general_ci = 'information_schema'
+          and table_name collate utf8_general_ci = 'parameters';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.004354  Lock_time: 0.000084  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 107
+SET timestamp=1618729647;
+/* ApplicationName=GoLand 2020.3 */ select table_name from information_schema.tables
+        where table_schema collate utf8_general_ci = 'information_schema'
+          and table_name collate utf8_general_ci = 'parameters';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.000286  Lock_time: 0.000065  Rows_sent: 5  Rows_examined: 10
+# Rows_affected: 0  Bytes_sent: 376
+SET timestamp=1618729647;
+/* ApplicationName=GoLand 2020.3 */ select schema_name, default_collation_name
+        from information_schema.schemata
+        order by if(schema() = schema_name, 1, 2), schema_name;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.000256  Lock_time: 0.000063  Rows_sent: 322  Rows_examined: 322
+# Rows_affected: 0  Bytes_sent: 9889
+SET timestamp=1618729647;
+/* ApplicationName=GoLand 2020.3 */ select collation_name, character_set_name,
+          is_default collate utf8_general_ci = 'Yes' as is_default
+        from information_schema.collations;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.000141  Lock_time: 0.000037  Rows_sent: 4  Rows_examined: 84
+# Rows_affected: 0  Bytes_sent: 188
+SET timestamp=1618729647;
+/* ApplicationName=GoLand 2020.3 */ select grantee from information_schema.user_privileges group by grantee;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.002826  Lock_time: 0.000055  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 107
+SET timestamp=1618729647;
+/* ApplicationName=GoLand 2020.3 */ select table_name from information_schema.tables
+        where table_schema collate utf8_general_ci = 'information_schema'
+          and table_name collate utf8_general_ci = 'parameters';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.000260  Lock_time: 0.000049  Rows_sent: 5  Rows_examined: 10
+# Rows_affected: 0  Bytes_sent: 376
+SET timestamp=1618729647;
+/* ApplicationName=GoLand 2020.3 */ select schema_name, default_collation_name
+        from information_schema.schemata
+        order by if(schema() = schema_name, 1, 2), schema_name;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.000431  Lock_time: 0.000046  Rows_sent: 39  Rows_examined: 39
+# Rows_affected: 0  Bytes_sent: 2625
+SET timestamp=1618729647;
+/* ApplicationName=GoLand 2020.3 */ select table_name, table_type, table_comment, engine, table_collation
+        from information_schema.tables
+        where table_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.001067  Lock_time: 0.000053  Rows_sent: 308  Rows_examined: 616
+# Rows_affected: 0  Bytes_sent: 21547
+SET timestamp=1618729647;
+/* ApplicationName=GoLand 2020.3 */ select
+        ordinal_position,
+        column_name,
+        column_type,
+        column_default,
+        generation_expression,
+        table_name,
+        column_comment,
+        is_nullable,
+        extra,
+        collation_name
+      from information_schema.columns
+      where table_schema = 'indochat'
+      order by table_name, ordinal_position;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.000751  Lock_time: 0.000060  Rows_sent: 32  Rows_examined: 105
+# Rows_affected: 0  Bytes_sent: 2636
+SET timestamp=1618729647;
+/* ApplicationName=GoLand 2020.3 */ select
+          table_name,
+          index_name,
+          index_comment,
+          index_type,
+          non_unique,
+          column_name,
+          collation,
+          null expression
+        from information_schema.statistics
+        where table_schema = 'indochat' and
+              index_schema = 'indochat' and
+              index_name collate utf8_general_ci <> 'PRIMARY'
+        order by
+          index_schema,
+          table_name,
+          index_name,
+          seq_in_index;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.041483  Lock_time: 0.000156  Rows_sent: 46  Rows_examined: 46
+# Rows_affected: 0  Bytes_sent: 2580
+SET timestamp=1618729647;
+/* ApplicationName=GoLand 2020.3 */ select
+        c.constraint_name,
+        c.table_name,
+        c.constraint_type,
+        r.match_option,
+        r.update_rule,
+        r.delete_rule
+      from information_schema.table_constraints c
+        left join information_schema.referential_constraints r on
+            r.constraint_schema   = c.constraint_schema
+        and r.constraint_name     = c.constraint_name
+      where c.table_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.000385  Lock_time: 0.000045  Rows_sent: 51  Rows_examined: 102
+# Rows_affected: 0  Bytes_sent: 2709
+SET timestamp=1618729647;
+/* ApplicationName=GoLand 2020.3 */ select
+        constraint_name,
+        table_name,
+        column_name,
+        referenced_table_schema,
+        referenced_table_name,
+        referenced_column_name
+      from information_schema.key_column_usage
+      where table_schema = 'indochat'
+      order by
+          table_name
+        , constraint_name
+        , ordinal_position;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.000315  Lock_time: 0.000034  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 324
+SET timestamp=1618729647;
+/* ApplicationName=GoLand 2020.3 */ select
+          constraint_name,
+          table_name,
+          check_clause
+        from information_schema.check_constraints
+        where constraint_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.133653  Lock_time: 0.000044  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 452
+SET timestamp=1618729647;
+/* ApplicationName=GoLand 2020.3 */ select
+          trigger_name,
+          event_object_table,
+          event_manipulation,
+          action_timing,
+          definer
+        from information_schema.triggers
+        where trigger_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.000344  Lock_time: 0.000282  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 693
+SET timestamp=1618729647;
+/* ApplicationName=GoLand 2020.3 */ select
+          event_name,
+          event_comment,
+          definer,
+          event_type = 'RECURRING' recurring,
+          interval_value,
+          interval_field,
+          cast(coalesce(starts, execute_at) as char) starts,
+          cast(ends as char) ends,
+          status,
+          on_completion = 'PRESERVE' preserve,
+          last_executed
+        from information_schema.events
+        where event_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.000435  Lock_time: 0.000271  Rows_sent: 2  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 1071
+SET timestamp=1618729647;
+/* ApplicationName=GoLand 2020.3 */ select
+          routine_name,
+          routine_type,
+          routine_definition,
+          routine_comment,
+          dtd_identifier,
+          definer
+        from information_schema.routines
+        where routine_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.000521  Lock_time: 0.000325  Rows_sent: 6  Rows_examined: 23
+# Rows_affected: 0  Bytes_sent: 736
+SET timestamp=1618729647;
+/* ApplicationName=GoLand 2020.3 */ select specific_name,
+        ordinal_position,
+        parameter_name,
+        parameter_mode,
+        dtd_identifier
+      from information_schema.parameters
+      where specific_schema = 'indochat' and ordinal_position > 0
+      order by specific_name, ordinal_position;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.000537  Lock_time: 0.000041  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 242
+SET timestamp=1618729647;
+/* ApplicationName=GoLand 2020.3 */ select table_name, view_definition, definer
+      from information_schema.views
+      where table_schema = 'indochat';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.000940  Lock_time: 0.000170  Rows_sent: 14  Rows_examined: 14
+# Rows_affected: 0  Bytes_sent: 1297
+SET timestamp=1618729647;
+/* ApplicationName=GoLand 2020.3 */ select table_name, table_type, table_comment, engine, table_collation
+        from information_schema.tables
+        where table_schema = 'schema_name';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.000906  Lock_time: 0.000052  Rows_sent: 178  Rows_examined: 356
+# Rows_affected: 0  Bytes_sent: 13735
+SET timestamp=1618729647;
+/* ApplicationName=GoLand 2020.3 */ select
+        ordinal_position,
+        column_name,
+        column_type,
+        column_default,
+        generation_expression,
+        table_name,
+        column_comment,
+        is_nullable,
+        extra,
+        collation_name
+      from information_schema.columns
+      where table_schema = 'schema_name'
+      order by table_name, ordinal_position;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.000707  Lock_time: 0.000666  Rows_sent: 13  Rows_examined: 40
+# Rows_affected: 0  Bytes_sent: 1505
+SET timestamp=1618729647;
+/* ApplicationName=GoLand 2020.3 */ select
+          table_name,
+          index_name,
+          index_comment,
+          index_type,
+          non_unique,
+          column_name,
+          collation,
+          null expression
+        from information_schema.statistics
+        where table_schema = 'schema_name' and
+              index_schema = 'schema_name' and
+              index_name collate utf8_general_ci <> 'PRIMARY'
+        order by
+          index_schema,
+          table_name,
+          index_name,
+          seq_in_index;
+# Time: 210418  7:07:28
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.005371  Lock_time: 0.000070  Rows_sent: 19  Rows_examined: 19
+# Rows_affected: 0  Bytes_sent: 1426
+SET timestamp=1618729648;
+/* ApplicationName=GoLand 2020.3 */ select
+        c.constraint_name,
+        c.table_name,
+        c.constraint_type,
+        r.match_option,
+        r.update_rule,
+        r.delete_rule
+      from information_schema.table_constraints c
+        left join information_schema.referential_constraints r on
+            r.constraint_schema   = c.constraint_schema
+        and r.constraint_name     = c.constraint_name
+      where c.table_schema = 'schema_name';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.000285  Lock_time: 0.000049  Rows_sent: 19  Rows_examined: 38
+# Rows_affected: 0  Bytes_sent: 1430
+SET timestamp=1618729648;
+/* ApplicationName=GoLand 2020.3 */ select
+        constraint_name,
+        table_name,
+        column_name,
+        referenced_table_schema,
+        referenced_table_name,
+        referenced_column_name
+      from information_schema.key_column_usage
+      where table_schema = 'schema_name'
+      order by
+          table_name
+        , constraint_name
+        , ordinal_position;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.000243  Lock_time: 0.000046  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 324
+SET timestamp=1618729648;
+/* ApplicationName=GoLand 2020.3 */ select
+          constraint_name,
+          table_name,
+          check_clause
+        from information_schema.check_constraints
+        where constraint_schema = 'schema_name';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.129269  Lock_time: 0.000045  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 452
+SET timestamp=1618729648;
+/* ApplicationName=GoLand 2020.3 */ select
+          trigger_name,
+          event_object_table,
+          event_manipulation,
+          action_timing,
+          definer
+        from information_schema.triggers
+        where trigger_schema = 'schema_name';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.000350  Lock_time: 0.000285  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 693
+SET timestamp=1618729648;
+/* ApplicationName=GoLand 2020.3 */ select
+          event_name,
+          event_comment,
+          definer,
+          event_type = 'RECURRING' recurring,
+          interval_value,
+          interval_field,
+          cast(coalesce(starts, execute_at) as char) starts,
+          cast(ends as char) ends,
+          status,
+          on_completion = 'PRESERVE' preserve,
+          last_executed
+        from information_schema.events
+        where event_schema = 'schema_name';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.000401  Lock_time: 0.000285  Rows_sent: 0  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 532
+SET timestamp=1618729648;
+/* ApplicationName=GoLand 2020.3 */ select
+          routine_name,
+          routine_type,
+          routine_definition,
+          routine_comment,
+          dtd_identifier,
+          definer
+        from information_schema.routines
+        where routine_schema = 'schema_name';
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.000428  Lock_time: 0.000272  Rows_sent: 0  Rows_examined: 17
+# Rows_affected: 0  Bytes_sent: 478
+SET timestamp=1618729648;
+/* ApplicationName=GoLand 2020.3 */ select specific_name,
+        ordinal_position,
+        parameter_name,
+        parameter_mode,
+        dtd_identifier
+      from information_schema.parameters
+      where specific_schema = 'schema_name' and ordinal_position > 0
+      order by specific_name, ordinal_position;
+# User@Host: root[root] @  [192.168.16.1]
+# Thread_id: 16  Schema:   QC_hit: No
+# Query_time: 0.001026  Lock_time: 0.000175  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 242
+SET timestamp=1618729648;
+/* ApplicationName=GoLand 2020.3 */ select table_name, view_definition, definer
+      from information_schema.views
+      where table_schema = 'schema_name';
