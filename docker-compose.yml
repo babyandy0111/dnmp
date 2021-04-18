@@ -89,7 +89,7 @@ services:
       - "9200:9200"
       - "9300:9300"
     environment:
-      ES_JAVA_OPTS: "-Xmx512m -Xms512m"
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
     volumes:
       - ./elasticsearch/data/:/usr/share/elasticsearch/data/:rw
       - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro

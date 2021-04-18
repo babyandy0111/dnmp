@@ -16,6 +16,7 @@ discovery.zen.minimum_master_nodes: 1
 discovery.type: single-node
 
 network.bind_host: 0.0.0.0
+bootstrap.memory_lock: true
 
 ## X-Pack settings
 ## see https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-xpack.html
@@ -23,6 +24,3 @@ network.bind_host: 0.0.0.0
 #xpack.license.self_generated.type: trial
 #xpack.security.enabled: true
 #xpack.monitoring.collection.enabled: true
-xpack.monitoring.collection.enabled: true
-xpack.monitoring.exporters.remote.type: http
-xpack.monitoring.exporters.remote.host: monitor
