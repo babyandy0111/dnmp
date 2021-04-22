@@ -1889,3 +1889,97 @@ Time		    Id Command	Argument
 mysqld, Version: 10.5.8-MariaDB-1:10.5.8+maria~focal-log (mariadb.org binary distribution). started with:
 Tcp port: 3306  Unix socket: (null)
 Time		    Id Command	Argument
+mysqld, Version: 10.5.8-MariaDB-1:10.5.8+maria~focal-log (mariadb.org binary distribution). started with:
+Tcp port: 3306  Unix socket: (null)
+Time		    Id Command	Argument
+mysqld, Version: 10.5.8-MariaDB-1:10.5.8+maria~focal-log (mariadb.org binary distribution). started with:
+Tcp port: 3306  Unix socket: (null)
+Time		    Id Command	Argument
+# Time: 210422 13:27:34
+# User@Host: root[root] @  [172.28.0.1]
+# Thread_id: 3  Schema:   QC_hit: No
+# Query_time: 0.002105  Lock_time: 0.001898  Rows_sent: 40  Rows_examined: 80
+# Rows_affected: 0  Bytes_sent: 1084
+SET timestamp=1619098054;
+SELECT * FROM `information_schema`.`character_sets` ORDER BY `character_set_name` ASC;
+# User@Host: root[root] @  [172.28.0.1]
+# Thread_id: 3  Schema:   QC_hit: No
+# Query_time: 0.001527  Lock_time: 0.001040  Rows_sent: 33  Rows_examined: 355
+# Rows_affected: 0  Bytes_sent: 690
+SET timestamp=1619098054;
+SELECT * FROM `information_schema`.`collations` WHERE character_set_name = 'utf8mb4' ORDER BY `collation_name` ASC;
+# Time: 210422 13:27:41
+# User@Host: root[root] @  [172.28.0.1]
+# Thread_id: 3  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.006295  Lock_time: 0.004953  Rows_sent: 0  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 670
+use go-zero-demo;
+SET timestamp=1619098061;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'go-zero-demo' ORDER BY routine_name;
+# User@Host: root[root] @  [172.28.0.1]
+# Thread_id: 4  Schema:   QC_hit: No
+# Query_time: 0.000404  Lock_time: 0.000259  Rows_sent: 0  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 242
+SET timestamp=1619098061;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'go-zero-demo';
+# Time: 210422 13:27:47
+# User@Host: root[root] @  [172.28.0.1]
+# Thread_id: 3  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.000818  Lock_time: 0.000524  Rows_sent: 0  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 670
+SET timestamp=1619098067;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'go-zero-demo' ORDER BY routine_name;
+# User@Host: root[root] @  [172.28.0.1]
+# Thread_id: 4  Schema:   QC_hit: No
+# Query_time: 0.000663  Lock_time: 0.000353  Rows_sent: 0  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 242
+SET timestamp=1619098067;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'go-zero-demo';
+# Time: 210422 13:32:51
+# User@Host: root[root] @  [172.28.0.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.002705  Lock_time: 0.001654  Rows_sent: 0  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 670
+SET timestamp=1619098371;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'go-zero-demo' ORDER BY routine_name;
+# User@Host: root[root] @  [172.28.0.1]
+# Thread_id: 7  Schema:   QC_hit: No
+# Query_time: 0.001012  Lock_time: 0.000673  Rows_sent: 0  Rows_examined: 4
+# Rows_affected: 0  Bytes_sent: 242
+SET timestamp=1619098371;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'go-zero-demo';
+# Time: 210422 13:32:52
+# User@Host: root[root] @  [172.28.0.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.000343  Lock_time: 0.000176  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 70
+SET timestamp=1619098372;
+SELECT COUNT(1) FROM `user`;
+# Time: 210422 13:32:53
+# User@Host: root[root] @  [172.28.0.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.000313  Lock_time: 0.000120  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 271
+SET timestamp=1619098373;
+SELECT * FROM `user` LIMIT 0,1000;
+# User@Host: root[root] @  [172.28.0.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.004100  Lock_time: 0.000154  Rows_sent: 8  Rows_examined: 8
+# Rows_affected: 0  Bytes_sent: 222
+SET timestamp=1619098373;
+SELECT Engine, Support FROM `information_schema`.`engines` WHERE SUPPORT IN ('DEFAULT', 'YES');
+# User@Host: root[root] @  [172.28.0.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.000319  Lock_time: 0.000100  Rows_sent: 40  Rows_examined: 80
+# Rows_affected: 0  Bytes_sent: 1085
+SET timestamp=1619098373;
+SELECT * FROM `information_schema`.`character_sets` ORDER BY `character_set_name` ASC;
+# User@Host: root[root] @  [172.28.0.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.000574  Lock_time: 0.000089  Rows_sent: 33  Rows_examined: 355
+# Rows_affected: 0  Bytes_sent: 692
+SET timestamp=1619098373;
+SELECT * FROM `information_schema`.`collations` WHERE character_set_name = 'utf8mb4' ORDER BY `collation_name` ASC;
+mysqld, Version: 10.5.8-MariaDB-1:10.5.8+maria~focal-log (mariadb.org binary distribution). started with:
+Tcp port: 3306  Unix socket: (null)
+Time		    Id Command	Argument
