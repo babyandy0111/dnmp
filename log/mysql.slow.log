@@ -1824,3 +1824,68 @@ SET timestamp=1618729648;
 /* ApplicationName=GoLand 2020.3 */ select table_name, view_definition, definer
       from information_schema.views
       where table_schema = 'schema_name';
+mysqld, Version: 5.7.27-log (MySQL Community Server (GPL)). started with:
+Tcp port: 3306  Unix socket: (null)
+Time                 Id Command    Argument
+mysqld, Version: 10.5.8-MariaDB-1:10.5.8+maria~focal-log (mariadb.org binary distribution). started with:
+Tcp port: 3306  Unix socket: (null)
+Time		    Id Command	Argument
+# Time: 210422  9:53:59
+# User@Host: root[root] @  [172.21.0.1]
+# Thread_id: 3  Schema: goapp  QC_hit: No
+# Query_time: 0.006765  Lock_time: 0.006556  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+use goapp;
+SET timestamp=1619085239;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'goapp' ORDER BY routine_name;
+# User@Host: root[root] @  [172.21.0.1]
+# Thread_id: 4  Schema:   QC_hit: No
+# Query_time: 0.000309  Lock_time: 0.000249  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+SET timestamp=1619085239;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'goapp';
+# Time: 210422  9:54:06
+# User@Host: root[root] @  [172.21.0.1]
+# Thread_id: 3  Schema: go-micro-project  QC_hit: No
+# Query_time: 0.000486  Lock_time: 0.000404  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+use go-micro-project;
+SET timestamp=1619085246;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'go-micro-project' ORDER BY routine_name;
+# User@Host: root[root] @  [172.21.0.1]
+# Thread_id: 4  Schema:   QC_hit: No
+# Query_time: 0.000432  Lock_time: 0.000352  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+SET timestamp=1619085246;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'go-micro-project';
+# Time: 210422  9:54:08
+# User@Host: root[root] @  [172.21.0.1]
+# Thread_id: 3  Schema: go-micro-project  QC_hit: No
+# Query_time: 0.001651  Lock_time: 0.000148  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 281
+SET timestamp=1619085248;
+SELECT * FROM `user` LIMIT 0,1000;
+# User@Host: root[root] @  [172.21.0.1]
+# Thread_id: 3  Schema: go-micro-project  QC_hit: No
+# Query_time: 0.000127  Lock_time: 0.000065  Rows_sent: 8  Rows_examined: 8
+# Rows_affected: 0  Bytes_sent: 222
+SET timestamp=1619085248;
+SELECT Engine, Support FROM `information_schema`.`engines` WHERE SUPPORT IN ('DEFAULT', 'YES');
+# User@Host: root[root] @  [172.21.0.1]
+# Thread_id: 3  Schema: go-micro-project  QC_hit: No
+# Query_time: 0.000149  Lock_time: 0.000042  Rows_sent: 40  Rows_examined: 80
+# Rows_affected: 0  Bytes_sent: 1085
+SET timestamp=1619085248;
+SELECT * FROM `information_schema`.`character_sets` ORDER BY `character_set_name` ASC;
+# User@Host: root[root] @  [172.21.0.1]
+# Thread_id: 3  Schema: go-micro-project  QC_hit: No
+# Query_time: 0.000271  Lock_time: 0.000038  Rows_sent: 33  Rows_examined: 355
+# Rows_affected: 0  Bytes_sent: 692
+SET timestamp=1619085248;
+SELECT * FROM `information_schema`.`collations` WHERE character_set_name = 'utf8mb4' ORDER BY `collation_name` ASC;
+mysqld, Version: 10.5.8-MariaDB-1:10.5.8+maria~focal-log (mariadb.org binary distribution). started with:
+Tcp port: 3306  Unix socket: (null)
+Time		    Id Command	Argument
+mysqld, Version: 10.5.8-MariaDB-1:10.5.8+maria~focal-log (mariadb.org binary distribution). started with:
+Tcp port: 3306  Unix socket: (null)
+Time		    Id Command	Argument
