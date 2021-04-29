@@ -1,0 +1,55 @@
+version: "3"
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:${ELK_VERSION}
+    container_name: elasticsearch
+    hostname: elasticsearch
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+    volumes:
+      - ./elasticsearch/data/:/usr/share/elasticsearch/data/:rw
+      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+    networks:
+      - net-elk
+
+  kibana:
+    image: blacktop/kibana:7.10.2
+    container_name: kibana
+    hostname: kibana
+    environment:
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+    ports:
+      - "5601:5601"
+    volumes:
+      - ./kibana/config/:/usr/share/kibana/config:ro
+    depends_on:
+      - elasticsearch
+    networks:
+      - net-elk
+
+  logstash:
+    image: elastic/logstash:${ELK_VERSION}
+    container_name: logstash
+    hostname: logstash
+    ports:
+      - "5000:5000"
+      - "12201:12201/udp"
+      - "9600:9600"
+    volumes:
+      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+      - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
+      - ./log/:/var/log/dnmp/:rw
+    command: logstash -f /usr/share/logstash/pipeline/
+    depends_on:
+      - elasticsearch
+    environment:
+      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+    networks:
+      - net-elk
+
+networks:
+  net-elk:
+    driver: bridge

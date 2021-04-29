@@ -1983,3 +1983,494 @@ SELECT * FROM `information_schema`.`collations` WHERE character_set_name = 'utf8
 mysqld, Version: 10.5.8-MariaDB-1:10.5.8+maria~focal-log (mariadb.org binary distribution). started with:
 Tcp port: 3306  Unix socket: (null)
 Time		    Id Command	Argument
+mysqld, Version: 10.5.8-MariaDB-1:10.5.8+maria~focal-log (mariadb.org binary distribution). started with:
+Tcp port: 3306  Unix socket: (null)
+Time		    Id Command	Argument
+mysqld, Version: 10.5.8-MariaDB-1:10.5.8+maria~focal-log (mariadb.org binary distribution). started with:
+Tcp port: 3306  Unix socket: (null)
+Time		    Id Command	Argument
+# Time: 210423  3:14:10
+# User@Host: root[root] @  [172.30.0.1]
+# Thread_id: 4  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.008923  Lock_time: 0.008328  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+use go-zero-demo;
+SET timestamp=1619147650;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'go-zero-demo' ORDER BY routine_name;
+# User@Host: root[root] @  [172.30.0.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.000458  Lock_time: 0.000379  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+SET timestamp=1619147650;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'go-zero-demo';
+# Time: 210423  3:14:11
+# User@Host: root[root] @  [172.30.0.1]
+# Thread_id: 4  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001355  Lock_time: 0.000064  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 275
+SET timestamp=1619147651;
+SELECT * FROM `user` LIMIT 0,1000;
+# User@Host: root[root] @  [172.30.0.1]
+# Thread_id: 4  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.000188  Lock_time: 0.000117  Rows_sent: 8  Rows_examined: 8
+# Rows_affected: 0  Bytes_sent: 222
+SET timestamp=1619147651;
+SELECT Engine, Support FROM `information_schema`.`engines` WHERE SUPPORT IN ('DEFAULT', 'YES');
+# User@Host: root[root] @  [172.30.0.1]
+# Thread_id: 4  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.000271  Lock_time: 0.000070  Rows_sent: 40  Rows_examined: 80
+# Rows_affected: 0  Bytes_sent: 1085
+SET timestamp=1619147651;
+SELECT * FROM `information_schema`.`character_sets` ORDER BY `character_set_name` ASC;
+# User@Host: root[root] @  [172.30.0.1]
+# Thread_id: 4  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.000354  Lock_time: 0.000067  Rows_sent: 33  Rows_examined: 355
+# Rows_affected: 0  Bytes_sent: 692
+SET timestamp=1619147651;
+SELECT * FROM `information_schema`.`collations` WHERE character_set_name = 'utf8mb4' ORDER BY `collation_name` ASC;
+# Time: 210423  3:14:56
+# User@Host: root[root] @  [172.30.0.1]
+# Thread_id: 4  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001491  Lock_time: 0.000124  Rows_sent: 2  Rows_examined: 2
+# Rows_affected: 0  Bytes_sent: 306
+SET timestamp=1619147696;
+SELECT * FROM `user` LIMIT 0,1000;
+mysqld, Version: 10.5.8-MariaDB-1:10.5.8+maria~focal-log (mariadb.org binary distribution). started with:
+Tcp port: 3306  Unix socket: (null)
+Time		    Id Command	Argument
+# Time: 210423  6:21:16
+# User@Host: root[root] @  [192.168.128.1]
+# Thread_id: 3  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.007485  Lock_time: 0.007273  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+use go-zero-demo;
+SET timestamp=1619158876;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'go-zero-demo' ORDER BY routine_name;
+# User@Host: root[root] @  [192.168.128.1]
+# Thread_id: 4  Schema:   QC_hit: No
+# Query_time: 0.000449  Lock_time: 0.000359  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+SET timestamp=1619158876;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'go-zero-demo';
+# Time: 210423  6:21:20
+# User@Host: root[root] @  [192.168.128.1]
+# Thread_id: 3  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.000447  Lock_time: 0.000374  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+SET timestamp=1619158880;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'go-zero-demo' ORDER BY routine_name;
+# User@Host: root[root] @  [192.168.128.1]
+# Thread_id: 4  Schema:   QC_hit: No
+# Query_time: 0.000410  Lock_time: 0.000327  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+SET timestamp=1619158880;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'go-zero-demo';
+# Time: 210423  6:37:39
+# User@Host: root[root] @  [192.168.128.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.000176  Lock_time: 0.000046  Rows_sent: 40  Rows_examined: 80
+# Rows_affected: 0  Bytes_sent: 1084
+SET timestamp=1619159859;
+SELECT * FROM `information_schema`.`character_sets` ORDER BY `character_set_name` ASC;
+# User@Host: root[root] @  [192.168.128.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.000313  Lock_time: 0.000046  Rows_sent: 33  Rows_examined: 355
+# Rows_affected: 0  Bytes_sent: 690
+SET timestamp=1619159859;
+SELECT * FROM `information_schema`.`collations` WHERE character_set_name = 'utf8mb4' ORDER BY `collation_name` ASC;
+# Time: 210423  6:37:40
+# User@Host: root[root] @  [192.168.128.1]
+# Thread_id: 5  Schema: gozero  QC_hit: No
+# Query_time: 0.000560  Lock_time: 0.000409  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+use gozero;
+SET timestamp=1619159860;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'gozero' ORDER BY routine_name;
+# User@Host: root[root] @  [192.168.128.1]
+# Thread_id: 6  Schema:   QC_hit: No
+# Query_time: 0.000610  Lock_time: 0.000518  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+SET timestamp=1619159860;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'gozero';
+# Time: 210423  6:39:47
+# User@Host: root[root] @  [192.168.128.1]
+# Thread_id: 5  Schema: gozero  QC_hit: No
+# Query_time: 0.000525  Lock_time: 0.000392  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+SET timestamp=1619159987;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'gozero' ORDER BY routine_name;
+# User@Host: root[root] @  [192.168.128.1]
+# Thread_id: 6  Schema:   QC_hit: No
+# Query_time: 0.000404  Lock_time: 0.000325  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+SET timestamp=1619159987;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'gozero';
+mysqld, Version: 10.5.8-MariaDB-1:10.5.8+maria~focal-log (mariadb.org binary distribution). started with:
+Tcp port: 3306  Unix socket: (null)
+Time		    Id Command	Argument
+mysqld, Version: 10.5.8-MariaDB-1:10.5.8+maria~focal-log (mariadb.org binary distribution). started with:
+Tcp port: 3306  Unix socket: (null)
+Time		    Id Command	Argument
+mysqld, Version: 10.5.8-MariaDB-1:10.5.8+maria~focal-log (mariadb.org binary distribution). started with:
+Tcp port: 3306  Unix socket: (null)
+Time		    Id Command	Argument
+# Time: 210427  4:41:25
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 4  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.009555  Lock_time: 0.009192  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+use go-zero-demo;
+SET timestamp=1619498485;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'go-zero-demo' ORDER BY routine_name;
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.000662  Lock_time: 0.000564  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+SET timestamp=1619498485;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'go-zero-demo';
+# Time: 210427  4:41:29
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 4  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.000408  Lock_time: 0.000340  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+SET timestamp=1619498489;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'go-zero-demo' ORDER BY routine_name;
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.000493  Lock_time: 0.000428  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+SET timestamp=1619498489;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'go-zero-demo';
+# Time: 210427  4:41:46
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 4  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.000457  Lock_time: 0.000391  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+SET timestamp=1619498506;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'go-zero-demo' ORDER BY routine_name;
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 5  Schema:   QC_hit: No
+# Query_time: 0.000289  Lock_time: 0.000227  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+SET timestamp=1619498506;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'go-zero-demo';
+# Time: 210427  7:59:11
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.000525  Lock_time: 0.000434  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+SET timestamp=1619510351;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'go-zero-demo' ORDER BY routine_name;
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 7  Schema:   QC_hit: No
+# Query_time: 0.000388  Lock_time: 0.000305  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+SET timestamp=1619510351;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'go-zero-demo';
+# Time: 210427  7:59:16
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.002457  Lock_time: 0.000063  Rows_sent: 1  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 70
+SET timestamp=1619510356;
+SELECT COUNT(1) FROM `point_use`;
+# Time: 210427  7:59:18
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001427  Lock_time: 0.000117  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 218
+SET timestamp=1619510358;
+SELECT * FROM `point_use` LIMIT 0,1000;
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.000150  Lock_time: 0.000097  Rows_sent: 8  Rows_examined: 8
+# Rows_affected: 0  Bytes_sent: 222
+SET timestamp=1619510358;
+SELECT Engine, Support FROM `information_schema`.`engines` WHERE SUPPORT IN ('DEFAULT', 'YES');
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.000211  Lock_time: 0.000109  Rows_sent: 40  Rows_examined: 80
+# Rows_affected: 0  Bytes_sent: 1085
+SET timestamp=1619510358;
+SELECT * FROM `information_schema`.`character_sets` ORDER BY `character_set_name` ASC;
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.000332  Lock_time: 0.000038  Rows_sent: 33  Rows_examined: 355
+# Rows_affected: 0  Bytes_sent: 692
+SET timestamp=1619510358;
+SELECT * FROM `information_schema`.`collations` WHERE character_set_name = 'utf8mb4' ORDER BY `collation_name` ASC;
+# Time: 210427  8:00:06
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001103  Lock_time: 0.000035  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 253
+SET timestamp=1619510406;
+SELECT * FROM `point_use` LIMIT 0,1000;
+# Time: 210427  8:13:21
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.004298  Lock_time: 0.003160  Rows_sent: 1  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 66
+SET timestamp=1619511201;
+SELECT SUM(total_earn - total_use) total FROM(SELECT user_id, SUM(point) total_earn, 0 AS total_use FROM `point_earn` WHERE user_id = 1 AND expired_at > now() GROUP BY user_id UNION ALL SELECT user_id, 0 AS total_earn, SUM(point) total_use FROM `point_earn` WHERE user_id = 1 GROUP BY user_id) tmp;
+# Time: 210427  8:14:11
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001427  Lock_time: 0.000065  Rows_sent: 1  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 70
+SET timestamp=1619511251;
+SELECT COUNT(1) FROM `point_earn`;
+# Time: 210427  8:14:12
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001463  Lock_time: 0.000065  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 233
+SET timestamp=1619511252;
+SELECT * FROM `point_earn` LIMIT 0,1000;
+# Time: 210427  8:14:55
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001311  Lock_time: 0.000067  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 269
+SET timestamp=1619511295;
+SELECT * FROM `point_earn` LIMIT 0,1000;
+# Time: 210427  8:14:59
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001596  Lock_time: 0.000100  Rows_sent: 1  Rows_examined: 2
+# Rows_affected: 0  Bytes_sent: 67
+SET timestamp=1619511299;
+SELECT SUM(total_earn - total_use) total FROM(
+
+
+SELECT user_id, SUM(point) total_earn, 0 AS total_use FROM `point_earn` WHERE user_id = 1 AND expired_at > now() GROUP BY user_id 
+
+UNION ALL 
+
+SELECT user_id, 0 AS total_earn, SUM(point) total_use FROM `point_earn` WHERE user_id = 1 GROUP BY user_id
+
+
+) tmp;
+# Time: 210427  8:15:12
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001175  Lock_time: 0.000057  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 253
+SET timestamp=1619511312;
+SELECT * FROM `point_use` LIMIT 0,1000;
+# Time: 210427  8:15:16
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001111  Lock_time: 0.000061  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 269
+SET timestamp=1619511316;
+SELECT * FROM `point_earn` LIMIT 0,1000;
+# Time: 210427  8:15:29
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.000969  Lock_time: 0.000042  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 270
+SET timestamp=1619511329;
+SELECT * FROM `point_earn` LIMIT 0,1000;
+# Time: 210427  8:15:33
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001549  Lock_time: 0.000163  Rows_sent: 1  Rows_examined: 2
+# Rows_affected: 0  Bytes_sent: 67
+SET timestamp=1619511333;
+SELECT SUM(total_earn - total_use) total FROM(
+
+
+SELECT user_id, SUM(point) total_earn, 0 AS total_use FROM `point_earn` WHERE user_id = 1 AND expired_at > now() GROUP BY user_id 
+
+UNION ALL 
+
+SELECT user_id, 0 AS total_earn, SUM(point) total_use FROM `point_earn` WHERE user_id = 1 GROUP BY user_id
+
+
+) tmp;
+# Time: 210427  8:15:34
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001792  Lock_time: 0.000148  Rows_sent: 1  Rows_examined: 2
+# Rows_affected: 0  Bytes_sent: 67
+SET timestamp=1619511334;
+SELECT SUM(total_earn - total_use) total FROM(
+
+
+SELECT user_id, SUM(point) total_earn, 0 AS total_use FROM `point_earn` WHERE user_id = 1 AND expired_at > now() GROUP BY user_id 
+
+UNION ALL 
+
+SELECT user_id, 0 AS total_earn, SUM(point) total_use FROM `point_earn` WHERE user_id = 1 GROUP BY user_id
+
+
+) tmp;
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001488  Lock_time: 0.000094  Rows_sent: 1  Rows_examined: 2
+# Rows_affected: 0  Bytes_sent: 67
+SET timestamp=1619511334;
+SELECT SUM(total_earn - total_use) total FROM(
+
+
+SELECT user_id, SUM(point) total_earn, 0 AS total_use FROM `point_earn` WHERE user_id = 1 AND expired_at > now() GROUP BY user_id 
+
+UNION ALL 
+
+SELECT user_id, 0 AS total_earn, SUM(point) total_use FROM `point_earn` WHERE user_id = 1 GROUP BY user_id
+
+
+) tmp;
+# Time: 210427  8:15:37
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001060  Lock_time: 0.000061  Rows_sent: 1  Rows_examined: 1
+# Rows_affected: 0  Bytes_sent: 253
+SET timestamp=1619511337;
+SELECT * FROM `point_use` LIMIT 0,1000;
+# Time: 210427  8:19:01
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001437  Lock_time: 0.000099  Rows_sent: 1  Rows_examined: 2
+# Rows_affected: 0  Bytes_sent: 69
+SET timestamp=1619511541;
+SELECT SUM(total_earn - total_use) total FROM(
+
+
+SELECT user_id, SUM(point) total_earn, 0 AS total_use FROM `point_earn` WHERE user_id = 1 AND expired_at > now() GROUP BY user_id 
+
+UNION ALL 
+
+SELECT user_id, 0 AS total_earn, SUM(point) total_use FROM `point_use` WHERE user_id = 1 GROUP BY user_id
+
+
+) tmp;
+# Time: 210427  8:19:45
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001524  Lock_time: 0.000099  Rows_sent: 1  Rows_examined: 2
+# Rows_affected: 0  Bytes_sent: 69
+SET timestamp=1619511585;
+SELECT SUM(total_earn - total_use) total FROM(SELECT user_id, SUM(point) total_earn, 0 AS total_use FROM `point_earn` WHERE user_id = 1 AND expired_at > now() GROUP BY user_id UNION ALL SELECT user_id, 0 AS total_earn, SUM(point) total_use FROM point_use WHERE user_id = 1 GROUP BY user_id) tmp;
+# Time: 210427  8:37:42
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 9  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001786  Lock_time: 0.000046  Rows_sent: 1  Rows_examined: 2
+# Rows_affected: 0  Bytes_sent: 64
+SET timestamp=1619512662;
+SELECT SUM(total_earn - total_use) total FROM(SELECT user_id, SUM(point) total_earn, 0 AS total_use FROM `point_earn` WHERE user_id = 1 AND expired_at > now() GROUP BY user_id UNION ALL SELECT user_id, 0 AS total_earn, SUM(point) total_use FROM point_use WHERE user_id = 1 GROUP BY user_id) tmp;
+# Time: 210427  8:39:52
+# User@Host: root[root] @  [192.168.240.1]
+# Thread_id: 10  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001341  Lock_time: 0.000041  Rows_sent: 1  Rows_examined: 2
+# Rows_affected: 0  Bytes_sent: 64
+SET timestamp=1619512792;
+SELECT SUM(total_earn - total_use) total FROM(SELECT user_id, SUM(point) total_earn, 0 AS total_use FROM `point_earn` WHERE user_id = 1 AND expired_at > now() GROUP BY user_id UNION ALL SELECT user_id, 0 AS total_earn, SUM(point) total_use FROM point_use WHERE user_id = 1 GROUP BY user_id) tmp;
+mysqld, Version: 10.5.8-MariaDB-1:10.5.8+maria~focal-log (mariadb.org binary distribution). started with:
+Tcp port: 3306  Unix socket: (null)
+Time		    Id Command	Argument
+# Time: 210429  3:35:26
+# User@Host: root[root] @  [172.20.0.1]
+# Thread_id: 4  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.003482  Lock_time: 0.000025  Rows_sent: 1  Rows_examined: 2
+# Rows_affected: 0  Bytes_sent: 64
+use go-zero-demo;
+SET timestamp=1619667326;
+SELECT SUM(total_earn - total_use) total FROM(SELECT user_id, SUM(point) total_earn, 0 AS total_use FROM `point_earn` WHERE user_id = 1 AND expired_at > now() GROUP BY user_id UNION ALL SELECT user_id, 0 AS total_earn, SUM(point) total_use FROM point_use WHERE user_id = 1 GROUP BY user_id) tmp;
+# Time: 210429  3:51:05
+# User@Host: root[root] @  [172.20.0.1]
+# Thread_id: 5  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001494  Lock_time: 0.000027  Rows_sent: 1  Rows_examined: 2
+# Rows_affected: 0  Bytes_sent: 64
+SET timestamp=1619668265;
+SELECT SUM(total_earn - total_use) total FROM(SELECT user_id, SUM(point) total_earn, 0 AS total_use FROM `point_earn` WHERE user_id = 1 AND expired_at > now() GROUP BY user_id UNION ALL SELECT user_id, 0 AS total_earn, SUM(point) total_use FROM point_use WHERE user_id = 1 GROUP BY user_id) tmp;
+# Time: 210429  3:51:13
+# User@Host: root[root] @  [172.20.0.1]
+# Thread_id: 5  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001035  Lock_time: 0.000029  Rows_sent: 1  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 60
+SET timestamp=1619668273;
+SELECT SUM(total_earn - total_use) total FROM(SELECT user_id, SUM(point) total_earn, 0 AS total_use FROM `point_earn` WHERE user_id = 2 AND expired_at > now() GROUP BY user_id UNION ALL SELECT user_id, 0 AS total_earn, SUM(point) total_use FROM point_use WHERE user_id = 2 GROUP BY user_id) tmp;
+# Time: 210429  3:54:30
+# User@Host: root[root] @  [172.20.0.1]
+# Thread_id: 6  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001315  Lock_time: 0.000028  Rows_sent: 1  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 60
+SET timestamp=1619668470;
+SELECT SUM(total_earn - total_use) total FROM(SELECT user_id, SUM(point) total_earn, 0 AS total_use FROM `point_earn` WHERE user_id = 2 AND expired_at > now() GROUP BY user_id UNION ALL SELECT user_id, 0 AS total_earn, SUM(point) total_use FROM point_use WHERE user_id = 2 GROUP BY user_id) tmp;
+# Time: 210429  3:55:04
+# User@Host: root[root] @  [172.20.0.1]
+# Thread_id: 7  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.007261  Lock_time: 0.006085  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+SET timestamp=1619668504;
+SELECT * FROM information_schema.routines WHERE routine_schema = 'go-zero-demo' ORDER BY routine_name;
+# User@Host: root[root] @  [172.20.0.1]
+# Thread_id: 8  Schema:   QC_hit: No
+# Query_time: 0.000332  Lock_time: 0.000271  Rows_sent: 0  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 172
+SET timestamp=1619668504;
+SELECT SPECIFIC_NAME, ROUTINE_TYPE, DTD_IDENTIFIER, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, DEFINER FROM `information_schema`.`ROUTINES` WHERE `ROUTINE_SCHEMA` = 'go-zero-demo';
+# Time: 210429  3:55:22
+# User@Host: root[root] @  [172.20.0.1]
+# Thread_id: 7  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001804  Lock_time: 0.000098  Rows_sent: 1  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 66
+SET timestamp=1619668522;
+SELECT SUM(total_earn - total_use) total FROM(SELECT user_id, SUM(point) total_earn, 0 AS total_use FROM `point_earn` WHERE user_id = 2 AND expired_at > now() GROUP BY user_id UNION ALL SELECT user_id, 0 AS total_earn, SUM(point) total_use FROM point_use WHERE user_id = 2 GROUP BY user_id) tmp;
+# Time: 210429  3:59:58
+# User@Host: root[root] @  [172.20.0.1]
+# Thread_id: 7  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001527  Lock_time: 0.000081  Rows_sent: 1  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 66
+SET timestamp=1619668798;
+SELECT SUM(total_earn - total_use) total 
+
+FROM
+(SELECT user_id, ifnull(SUM(point),0) total_earn, 0 AS total_use FROM `point_earn` WHERE user_id = 2 AND expired_at > now() GROUP BY user_id 
+
+UNION ALL 
+
+SELECT user_id, 0 AS total_earn, ifnull(SUM(point),0) total_use FROM point_use WHERE user_id = 2 GROUP BY user_id) tmp;
+# Time: 210429  4:02:33
+# User@Host: root[root] @  [172.20.0.1]
+# Thread_id: 9  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001326  Lock_time: 0.000026  Rows_sent: 1  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 60
+SET timestamp=1619668953;
+SELECT SUM(total_earn - total_use) total FROM(SELECT user_id, SUM(point) total_earn, 0 AS total_use FROM `point_earn` WHERE user_id = 2 AND expired_at > now() GROUP BY user_id UNION ALL SELECT user_id, 0 AS total_earn, SUM(point) total_use FROM point_use WHERE user_id = 2 GROUP BY user_id) tmp;
+# Time: 210429  4:05:56
+# User@Host: root[root] @  [172.20.0.1]
+# Thread_id: 10  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001174  Lock_time: 0.000058  Rows_sent: 1  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 60
+SET timestamp=1619669156;
+SELECT SUM(total_earn - total_use) total FROM(SELECT user_id, SUM(point) total_earn, 0 AS total_use FROM `point_earn` WHERE user_id = 2 AND expired_at > now() GROUP BY user_id UNION ALL SELECT user_id, 0 AS total_earn, SUM(point) total_use FROM point_use WHERE user_id = 2 GROUP BY user_id) tmp;
+# Time: 210429  4:08:34
+# User@Host: root[root] @  [172.20.0.1]
+# Thread_id: 11  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001130  Lock_time: 0.000025  Rows_sent: 1  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 60
+SET timestamp=1619669314;
+SELECT SUM(total_earn - total_use) total FROM(SELECT user_id, SUM(point) total_earn, 0 AS total_use FROM `point_earn` WHERE user_id = 2 AND expired_at > now() GROUP BY user_id UNION ALL SELECT user_id, 0 AS total_earn, SUM(point) total_use FROM point_use WHERE user_id = 2 GROUP BY user_id) tmp;
+# Time: 210429  4:18:49
+# User@Host: root[root] @  [172.20.0.1]
+# Thread_id: 12  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001305  Lock_time: 0.000024  Rows_sent: 1  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 60
+SET timestamp=1619669929;
+SELECT SUM(total_earn - total_use) total FROM(SELECT user_id, SUM(point) total_earn, 0 AS total_use FROM `point_earn` WHERE user_id = 2 AND expired_at > now() GROUP BY user_id UNION ALL SELECT user_id, 0 AS total_earn, SUM(point) total_use FROM point_use WHERE user_id = 2 GROUP BY user_id) tmp;
+# User@Host: root[root] @  [172.20.0.1]
+# Thread_id: 12  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001200  Lock_time: 0.000024  Rows_sent: 1  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 60
+SET timestamp=1619669929;
+SELECT SUM(total_earn - total_use) total FROM(SELECT user_id, SUM(point) total_earn, 0 AS total_use FROM `point_earn` WHERE user_id = 2 AND expired_at > now() GROUP BY user_id UNION ALL SELECT user_id, 0 AS total_earn, SUM(point) total_use FROM point_use WHERE user_id = 2 GROUP BY user_id) tmp;
+# Time: 210429  4:27:35
+# User@Host: root[root] @  [172.20.0.1]
+# Thread_id: 13  Schema: go-zero-demo  QC_hit: No
+# Query_time: 0.001969  Lock_time: 0.000032  Rows_sent: 1  Rows_examined: 0
+# Rows_affected: 0  Bytes_sent: 60
+SET timestamp=1619670455;
+SELECT SUM(total_earn - total_use) total FROM(SELECT user_id, SUM(point) total_earn, 0 AS total_use FROM `point_earn` WHERE user_id = 2 AND expired_at > now() GROUP BY user_id UNION ALL SELECT user_id, 0 AS total_earn, SUM(point) total_use FROM point_use WHERE user_id = 2 GROUP BY user_id) tmp;
